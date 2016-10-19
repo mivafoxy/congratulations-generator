@@ -1,0 +1,262 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="7235e8a1-150b-470b-ad7c-e782e403ef5a" name="UMLUseCaseDiagram1" linkedPackageId="c96d6cc6-8fc4-4e05-933a-f4939c6d6714" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <profileInstances>
+    <packageHasProfileInstances Id="2b5059c8-dd8c-4549-b239-8fe010a20c4b">
+      <profileInstance Id="a2a937de-0750-4349-b013-708fbea058c6" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="6c362b11-5925-464d-8571-66d0c80ca544">
+      <profileInstance Id="eed0b412-a977-49c1-840d-6217a6b72444" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="8fe06042-fb3e-4b91-b9ce-b5c48a6dd538" name="Пользователь" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="61b9d463-db0a-49d3-ae5d-4c0adf31e2e2" />
+        <targetEnds>
+          <association Id="c921f33d-ec95-47b3-8248-c3a8197957f5" isDerived="false" sourceEndRoleName="Пользователь" targetEndRoleName="Создать поздравление" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="26a94266-4042-4c93-9a5a-c59dd9ea60ab" LastKnownName="Создать поздравление" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="43371f64-3575-4765-9ee4-e15ddde2fd3e" name="Пользователь" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="5291518d-f6fc-44bf-869b-9faa348379b1" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="618657aa-e3ac-469e-8eaf-5dc457f4b5da" name="Создать поздравление" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="8f70be2f-a768-4945-b78e-8fa2aa1e5399" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="277e334e-0b1e-4157-ad7f-1bd4a1934b9f" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="bf27d34e-bea4-4a61-9beb-b9da1581a626" name="Системный модуль" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="9005b0d9-bed7-4cc8-a6df-fc7c88128460" />
+      </subsystem>
+    </useCaseModelRootHasTypes>
+    <packageHasNamedElement>
+      <useCase Id="26a94266-4042-4c93-9a5a-c59dd9ea60ab" name="Создать поздравление" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="5ff13994-6a27-40fc-97e4-b58409f6934a" />
+        <additions>
+          <include Id="5ae26ed9-c06c-43e6-9da5-4d852414de57">
+            <useCaseMoniker Id="d2c5e040-71a8-41d7-860f-681dab6f8b88" LastKnownName="Ввод параметров " />
+            <elementDefinition Id="f9e1dfe8-2533-40a4-a784-6da9c1d613f8" />
+          </include>
+          <include Id="0817bb78-8fe5-48c5-91f8-c9d22147b721">
+            <useCaseMoniker Id="537a6890-5b51-4df8-a02d-614d494eac0e" LastKnownName="Выбор поздравления" />
+            <elementDefinition Id="0cbb03ec-6dea-48e8-b7c1-d076c85dfbe5" />
+          </include>
+        </additions>
+        <subjects>
+          <subsystemMoniker Id="bf27d34e-bea4-4a61-9beb-b9da1581a626" LastKnownName="Системный модуль" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="d2c5e040-71a8-41d7-860f-681dab6f8b88" name="Ввод параметров " isAbstract="false" isLeaf="false">
+        <elementDefinition Id="220e4fa7-7777-4d37-b0e8-07a959ffbc6f" />
+        <subjects>
+          <subsystemMoniker Id="bf27d34e-bea4-4a61-9beb-b9da1581a626" LastKnownName="Системный модуль" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="4cd21698-8653-43c9-8f1a-590c59151924" name="Ввод имени" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="b54e0f54-742f-4f9e-872a-5bdb5c1af03f" />
+        <generalsInternal>
+          <generalization Id="0dfae097-28fd-49a9-979e-83e5cce64643" isSubstitutable="false">
+            <useCaseMoniker Id="d2c5e040-71a8-41d7-860f-681dab6f8b88" LastKnownName="Ввод параметров " />
+            <elementDefinition Id="3371a3bb-ff3d-4ccb-8a40-0050015212f9" />
+          </generalization>
+        </generalsInternal>
+        <additions>
+          <include Id="ab8fb626-315b-4941-85c8-542cab93cf8c">
+            <useCaseMoniker Id="28937ca4-d60f-4ec1-8efc-cd116a7e633c" LastKnownName="Проверка корректности параметров" />
+            <elementDefinition Id="aa6eca3b-b6cc-4c7e-adf7-c6c97cb46508" />
+          </include>
+        </additions>
+        <subjects>
+          <subsystemMoniker Id="bf27d34e-bea4-4a61-9beb-b9da1581a626" LastKnownName="Системный модуль" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="dbbda4ea-f6ff-423e-8e5c-e5dc045268a9" name="Ввод возраста" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="7bf89f9d-f38f-43af-8ecc-a92a788e0dd8" />
+        <generalsInternal>
+          <generalization Id="e22bf654-f4a7-47ba-82af-a8bdb9e9b082" isSubstitutable="false">
+            <useCaseMoniker Id="d2c5e040-71a8-41d7-860f-681dab6f8b88" LastKnownName="Ввод параметров " />
+            <elementDefinition Id="39ed8511-9f30-483f-9cab-984ede88b43f" />
+          </generalization>
+        </generalsInternal>
+        <additions>
+          <include Id="0f1c4f45-d230-491b-92c6-acf4e5ee08fd">
+            <useCaseMoniker Id="28937ca4-d60f-4ec1-8efc-cd116a7e633c" LastKnownName="Проверка корректности параметров" />
+            <elementDefinition Id="baf26e58-bafe-4bfa-a4a6-3f69db1faab5" />
+          </include>
+        </additions>
+        <subjects>
+          <subsystemMoniker Id="bf27d34e-bea4-4a61-9beb-b9da1581a626" LastKnownName="Системный модуль" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="09cb6a93-b088-45ce-a38f-3d34b1ca3d39" name="Выбор пола" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="99b89c7c-47bc-4742-aff6-655a0282db31" />
+        <generalsInternal>
+          <generalization Id="0d0aa1d7-569a-4ccc-a906-08510c48d9bf" isSubstitutable="false">
+            <useCaseMoniker Id="d2c5e040-71a8-41d7-860f-681dab6f8b88" LastKnownName="Ввод параметров " />
+            <elementDefinition Id="87d47504-9c42-47c2-9e00-815b981722d3" />
+          </generalization>
+        </generalsInternal>
+        <additions>
+          <include Id="02f7662c-264d-4f3e-aaf2-fb94de22d6da">
+            <useCaseMoniker Id="28937ca4-d60f-4ec1-8efc-cd116a7e633c" LastKnownName="Проверка корректности параметров" />
+            <elementDefinition Id="ff0a5a5d-fe93-475e-b165-4e08dd5f819b" />
+          </include>
+        </additions>
+        <subjects>
+          <subsystemMoniker Id="bf27d34e-bea4-4a61-9beb-b9da1581a626" LastKnownName="Системный модуль" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="a9a00d7d-157c-4044-9d2e-48bb9e229219" name="Выбор увлечений" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="273fe1e4-ca1c-4bd5-8742-c2383f025654" />
+        <generalsInternal>
+          <generalization Id="2f334a07-f6a6-401f-866b-49e03a7c921d" isSubstitutable="false">
+            <useCaseMoniker Id="d2c5e040-71a8-41d7-860f-681dab6f8b88" LastKnownName="Ввод параметров " />
+            <elementDefinition Id="7fd45681-95fd-4e72-b614-a0127288d367" />
+          </generalization>
+        </generalsInternal>
+        <additions>
+          <include Id="f1144a2b-aafd-4248-a0b4-9eec9c57dbc2">
+            <useCaseMoniker Id="28937ca4-d60f-4ec1-8efc-cd116a7e633c" LastKnownName="Проверка корректности параметров" />
+            <elementDefinition Id="2c408e89-0866-4f92-928d-022fed482e28" />
+          </include>
+        </additions>
+        <subjects>
+          <subsystemMoniker Id="bf27d34e-bea4-4a61-9beb-b9da1581a626" LastKnownName="Системный модуль" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="ff184be6-9aa1-4e6d-8bf1-82514a345896" name="Выбор обращения" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="8a0d4b7b-688a-4e58-93f8-6f97ce1d604e" />
+        <generalsInternal>
+          <generalization Id="2a14054b-ade9-4ee1-84b3-1690a3848564" isSubstitutable="false">
+            <useCaseMoniker Id="d2c5e040-71a8-41d7-860f-681dab6f8b88" LastKnownName="Ввод параметров " />
+            <elementDefinition Id="7757c613-de14-4a07-bbe5-79d3cdefdba0" />
+          </generalization>
+        </generalsInternal>
+        <additions>
+          <include Id="225e064e-dd56-4c06-ad65-39af40ee30c9">
+            <useCaseMoniker Id="28937ca4-d60f-4ec1-8efc-cd116a7e633c" LastKnownName="Проверка корректности параметров" />
+            <elementDefinition Id="03d488e9-cec2-40c8-91bf-852131b379c2" />
+          </include>
+        </additions>
+        <subjects>
+          <subsystemMoniker Id="bf27d34e-bea4-4a61-9beb-b9da1581a626" LastKnownName="Системный модуль" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="28937ca4-d60f-4ec1-8efc-cd116a7e633c" name="Проверка корректности параметров" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="1bf479e7-2af0-43a8-bb29-2eb87b5dc7f5" />
+        <subjects>
+          <subsystemMoniker Id="bf27d34e-bea4-4a61-9beb-b9da1581a626" LastKnownName="Системный модуль" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="71e75da2-bdfc-4cd1-b6dc-f48e2da0f03b" name="Обращение к базе данных " isAbstract="false" isLeaf="false">
+        <elementDefinition Id="dad0eb92-ed4d-4107-9131-fc400e95f6d7" />
+        <extendedCases>
+          <extend Id="4013ee69-f8c9-4c1f-97a0-bcd3c54d41af">
+            <useCaseMoniker Id="28937ca4-d60f-4ec1-8efc-cd116a7e633c" LastKnownName="Проверка корректности параметров" />
+            <elementDefinition Id="dd7bf703-ae3b-458f-842b-6a10c2a6e192" />
+          </extend>
+        </extendedCases>
+        <additions>
+          <include Id="0b3a65dd-1d78-4b80-a65c-b85a2dd7162d">
+            <useCaseMoniker Id="f7038240-ad71-45af-8fdc-a61b6e524036" LastKnownName="Отбор соответствующих параметрам данных " />
+            <elementDefinition Id="d62673ce-69b5-422d-86e5-365c3d4ac768" />
+          </include>
+        </additions>
+        <subjects>
+          <subsystemMoniker Id="bf27d34e-bea4-4a61-9beb-b9da1581a626" LastKnownName="Системный модуль" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="507561fb-dadf-4c0a-bf6a-9bd7d58075a5" name="Вывод сообщения об ошибках" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="8214d6eb-a541-43b7-9f8a-e1bab7e3f51a" />
+        <extendedCases>
+          <extend Id="47877039-85f1-4ff8-b207-45701307e089">
+            <useCaseMoniker Id="28937ca4-d60f-4ec1-8efc-cd116a7e633c" LastKnownName="Проверка корректности параметров" />
+            <elementDefinition Id="4ec14a19-eb15-4bd7-b544-828caac76e70" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker Id="bf27d34e-bea4-4a61-9beb-b9da1581a626" LastKnownName="Системный модуль" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="70d59637-cc28-46fd-a1e2-d303f1abc8b2" name="Генерация поздравлений" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="9bd90d6c-31e8-46dc-b97e-a843dc3486ec" />
+        <additions>
+          <include Id="192f533a-d73c-4933-b8fc-0684c08ce0ac">
+            <useCaseMoniker Id="e5a437cb-9817-4046-bac1-ce64484b699c" LastKnownName="Вывод возможных вариантов  на экран" />
+            <elementDefinition Id="3f438428-2403-4262-bd09-4c1cd5656474" />
+          </include>
+        </additions>
+        <subjects>
+          <subsystemMoniker Id="bf27d34e-bea4-4a61-9beb-b9da1581a626" LastKnownName="Системный модуль" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="e5a437cb-9817-4046-bac1-ce64484b699c" name="Вывод возможных вариантов  на экран" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="99ece3fe-edd9-4067-a688-8bcfbed89019" />
+        <subjects>
+          <subsystemMoniker Id="bf27d34e-bea4-4a61-9beb-b9da1581a626" LastKnownName="Системный модуль" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="537a6890-5b51-4df8-a02d-614d494eac0e" name="Выбор поздравления" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="cf633e47-1c16-41e1-b5f8-b4572f794651" />
+        <subjects>
+          <subsystemMoniker Id="bf27d34e-bea4-4a61-9beb-b9da1581a626" LastKnownName="Системный модуль" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="f7038240-ad71-45af-8fdc-a61b6e524036" name="Отбор соответствующих параметрам данных " isAbstract="false" isLeaf="false">
+        <elementDefinition Id="54a1fc8b-6934-4874-b1b0-e52a762751ba" />
+        <additions>
+          <include Id="4200c059-50fd-4fe7-8ba0-068c47e691c4">
+            <useCaseMoniker Id="70d59637-cc28-46fd-a1e2-d303f1abc8b2" LastKnownName="Генерация поздравлений" />
+            <elementDefinition Id="0d5f51a2-0aa7-4fff-a5db-f2691dfca899" />
+          </include>
+        </additions>
+        <subjects>
+          <subsystemMoniker Id="bf27d34e-bea4-4a61-9beb-b9da1581a626" LastKnownName="Системный модуль" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="c96d6cc6-8fc4-4e05-933a-f4939c6d6714" name="lab_2">
+    <elementDefinition Id="ae1ba5ef-d36c-4253-8f11-7b48bf88f0ee" />
+  </package>
+</useCaseModelRoot>
