@@ -46,5 +46,8 @@
         <ComboBox Grid.Row="5" Grid.Column="1"/>
         <Label Grid.Row="6" Grid.Column="0">Праздник</Label>
         <ComboBox Grid.Row="6" Grid.Column="1"/>
+        <Button Name="acceptFormButton" Margin="175,27,10,10" Grid.Row="7" Grid.Column="1" TextBlock.TextAlignment="Center" Content="Accept"/>
+        <Button Name="clearformButton" Margin="89,27,96,10" Grid.Row="7" Grid.Column="1" TextBlock.TextAlignment="Center" Content="Clear"/>
+        <Button Name="exitButton" Margin="10,27,175,10" Grid.Row="7" TextBlock.TextAlignment="Center" Content="Exit" Click="exitButtonClick"/>
     </Grid>
 </Window>
