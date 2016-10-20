@@ -24,5 +24,10 @@ namespace Congratulations_generator
         {
             InitializeComponent();
         }
+
+        private void exitButtonClick(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
     }
 }
