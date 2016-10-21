@@ -23,11 +23,11 @@
         </Grid.ColumnDefinitions>
         <Label Grid.Row="0" Grid.Column="0" IsEnabled="False" FontFamily="Ravie" FontSize="14" FontWeight="Bold" Foreground="#FF020202">Введите информацию о человеке, которого вы хотите поздравить</Label>
         <Label Grid.Row="1" Grid.Column="0">Имя</Label>
-        <TextBox Grid.Row="1" Grid.Column="1"/>
+        <TextBox Name="nameTextBox" Grid.Row="1" Grid.Column="1"/>
         <Label Grid.Row="2" Grid.Column="0">Форма обращения</Label>
-        <TextBox Grid.Row="2" Grid.Column="1"/>
+        <TextBox Name="saluteTextBox"  Grid.Row="2" Grid.Column="1"/>
         <Label Grid.Row="3" Grid.Column="0">Возраст</Label>
-        <ComboBox Grid.Row="3" Grid.Column="1"/>
+        <ComboBox Name="ageComboBox" Grid.Row="3" Grid.Column="1"/>
         <Label Grid.Row="4" Grid.Column="0">Пол</Label>
         <Grid Grid.Row="4" Grid.Column="1">
             <Grid.ColumnDefinitions>
@@ -36,18 +36,18 @@
                 <ColumnDefinition Width="30px"/>
                 <ColumnDefinition Width="65px"/>
             </Grid.ColumnDefinitions>
-            <RadioButton/>
+            <RadioButton Name="maleRadioButton"/>
             <Label Grid.Column="1">Mужской</Label>
-            <RadioButton  Grid.Column="2"/>
+            <RadioButton Name="femaleRadioButton" Grid.Column="2"/>
             <Label Grid.Column="3">Женский</Label>
         </Grid>
 
         <Label Grid.Row="5" Grid.Column="0">Увлечения</Label>
-        <ComboBox Grid.Row="5" Grid.Column="1"/>
+        <ComboBox Name="hobbiesComboBox" Grid.Row="5" Grid.Column="1"/>
         <Label Grid.Row="6" Grid.Column="0">Праздник</Label>
-        <ComboBox Grid.Row="6" Grid.Column="1"/>
-        <Button Name="acceptFormButton" Margin="175,27,10,10" Grid.Row="7" Grid.Column="1" TextBlock.TextAlignment="Center" Content="Accept"/>
-        <Button Name="clearformButton" Margin="89,27,96,10" Grid.Row="7" Grid.Column="1" TextBlock.TextAlignment="Center" Content="Clear"/>
-        <Button Name="exitButton" Margin="10,27,175,10" Grid.Row="7" TextBlock.TextAlignment="Center" Content="Exit" Click="exitButtonClick"/>
+        <ComboBox Name="holidayComboBox" Grid.Row="6" Grid.Column="1"/>
+        <Button Name="acceptFormButton" Margin="175,27,10,10" Grid.Row="7" Grid.Column="1" TextBlock.TextAlignment="Center" Content="Принять"/>
+        <Button Name="clearformButton" Margin="89,27,96,10" Grid.Row="7" Grid.Column="1" TextBlock.TextAlignment="Center" Content="Очистить" Click="clearButtonClick"/>
+        <Button Name="exitButton" Margin="10,27,175,10" Grid.Row="7" TextBlock.TextAlignment="Center" Content="Выход" Click="exitButtonClick"/>
     </Grid>
 </Window>

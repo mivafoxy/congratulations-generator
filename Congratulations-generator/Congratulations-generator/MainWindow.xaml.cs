@@ -29,5 +29,13 @@ namespace Congratulations_generator
         {
             Application.Current.Shutdown();
         }
+        private void clearButtonClick(object sender, RoutedEventArgs e)
+        {
+            nameTextBox.Clear();
+            saluteTextBox.Clear();
+            ageComboBox = null;
+            hobbiesComboBox = null;
+            holidayComboBox = null;
+        }
     }
 }
