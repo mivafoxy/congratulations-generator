@@ -10,21 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Congratulations_generator
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для OutputWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class OutputWindow : Window
     {
-        public MainWindow()
+        public OutputWindow()
         {
             InitializeComponent();
-            Img1.Source = new BitmapImage(new Uri("Images/top.png", UriKind.Relative));
         }
-
     }
 }
