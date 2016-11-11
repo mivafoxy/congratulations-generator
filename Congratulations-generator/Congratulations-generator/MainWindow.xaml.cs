@@ -1,17 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Congratulations_generator
 {
@@ -26,5 +16,41 @@ namespace Congratulations_generator
             Img1.Source = new BitmapImage(new Uri("Images/top.png", UriKind.Relative));
         }
 
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void TextBox_TextChanged_1(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void ComboBox_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void ComboBox_SelectionChanged_2(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            OutputWindow outputWindow = new OutputWindow();
+            //место для функции корректировки данных
+            //место для функции генирации стартового поздравления и картинок
+            //не забыть закрыть первую форму при корректном заполнении
+            outputWindow.richTextBox.AppendText("Hello,World!\n");
+            outputWindow.richTextBox.AppendText("Hello,Life!\n\n\n\n\n\n\n\n\n\n");
+            outputWindow.richTextBox.AppendText("Hello,Friends!\n");
+            outputWindow.Show();
+        }
     }
 }
