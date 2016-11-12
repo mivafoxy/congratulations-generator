@@ -29,38 +29,14 @@ namespace Congratulations_generator
             Img1.Source = new BitmapImage(new Uri("Images/top.png", UriKind.Relative));
         }
 
-        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
-
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void TextBox_TextChanged_1(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void ComboBox_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
-
-        private void ComboBox_SelectionChanged_2(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
-
         private int returnLastId()
         {
             humanBaseEntities context = new humanBaseEntities();
             IQueryable<Human> custs = context.Human
                                                    .OrderByDescending(c => c.Id)
                                                    .Select(c => c);
-            return custs.First().Id;
+            if (custs == null || custs.Count() == 0) return 1;
+            return custs.First().Id + 1;
         }
 
         private void createHobbiesComboBox()
@@ -92,30 +68,96 @@ namespace Congratulations_generator
             for (int i = 3; i <= 100; i++) textBoxAge.Items.Add(i);
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private bool checkLog()
+        {
+            if(textBoxName==null||textBoxName.Text == string.Empty)
+            {
+                MessageBox.Show("Не введено поле 'Имя'");
+                return false;
+            }
+
+            if (textBoxCall == null || textBoxCall.Text == string.Empty)
+            {
+                MessageBox.Show("Не введено поле 'Обращение'");
+                return false;
+            }
+
+            for (int i = 0; i < textBoxCall.Text.ToCharArray().Length; i++)
+            {
+                if(textBoxCall.Text.ToCharArray()[i]>'0' && textBoxCall.Text.ToCharArray()[i]<'9')
+                {
+                    MessageBox.Show("Не корректное 'Обращение'");
+                    return false;
+                }
+            }
+
+            if (textBoxAge.Text == string.Empty || textBoxAge==null)
+            {
+                MessageBox.Show("Не выбран возраст");
+                return false;
+            }
+
+            if (comboBoxHoliday.Text == string.Empty || comboBoxHoliday == null)
+            {
+                MessageBox.Show("Не выбран праздник");
+                return false;
+            }
+
+            return true;
+        }
+
+        private void recordData(string sex)
         {
             List<Human> lct = new List<Human>
              {
                  new Human
                  {
-                     Id=returnLastId()+1,
+                     Id=returnLastId(),
                      Name=textBoxName.Text,
-                     Solute=textBoxCall.Text
+                     Solute=textBoxCall.Text,
+                     Age=Convert.ToInt32(textBoxAge.Text),
+                     Sex = sex,
+                     Interests=comboBoxInterests.Text,
+                     Holiday = comboBoxHoliday.Text
                  }
              };
-            MainWindow.insertToDataBase(lct);
 
-            MessageBox.Show(textBoxName.Text);
-            //clearFun();
+            MainWindow.insertToDataBase(lct);
+            //MessageBox.Show(textBoxName.Text);
 
             OutputWindow outputWindow = new OutputWindow();
             //место для функции корректировки данных
             //место для функции генирации стартового поздравления и картинок
             //не забыть закрыть первую форму при корректном заполнении
-            outputWindow.richTextBox.AppendText("Hello,World!\n");
-            outputWindow.richTextBox.AppendText("Hello,Life!\n\n\n\n\n\n\n\n\n\n");
-            outputWindow.richTextBox.AppendText("Hello,Friends!\n");
+            //outputWindow.richTextBox.AppendText("Hello,World!\n");
+            //outputWindow.richTextBox.AppendText("Hello,Life!\n\n\n\n\n\n\n\n\n\n");
+            //outputWindow.richTextBox.AppendText("Hello,Friends!\n");
             outputWindow.Show();
+
+
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            if (checkLog())
+            {
+                if (radioButtonMan.IsChecked == true)
+                {
+                    recordData("Мужской");
+                }
+                else if (radioButtonWoman.IsChecked == true)
+                {
+                    recordData("Женский");
+                }
+                else
+                {
+                    MessageBox.Show("Не выбран пол");
+                    return;
+                }
+            }
+            //clearFun();
+
+            
         }
     }
 }
