@@ -12,6 +12,7 @@ namespace Congratulations_generator
     /// </summary>
     public partial class MainWindow : Window
     {
+        //static People anketa;
         public static void insertToDataBase(List <Human> lct)
         {
             humanBaseEntities context = new humanBaseEntities();
@@ -123,15 +124,19 @@ namespace Congratulations_generator
              };
 
             MainWindow.insertToDataBase(lct);
+            People.dataObj = new People(textBoxName.Text, textBoxCall.Text, Convert.ToInt32(textBoxAge.Text), sex, comboBoxInterests.Text, comboBoxHoliday.Text);
+            //anketa.showPeople();
             //MessageBox.Show(textBoxName.Text);
 
             OutputWindow outputWindow = new OutputWindow();
             //место для функции корректировки данных
             //место для функции генирации стартового поздравления и картинок
             //не забыть закрыть первую форму при корректном заполнении
+            //оставлять старые данные при возврате к анкете
             //outputWindow.richTextBox.AppendText("Hello,World!\n");
             //outputWindow.richTextBox.AppendText("Hello,Life!\n\n\n\n\n\n\n\n\n\n");
             //outputWindow.richTextBox.AppendText("Hello,Friends!\n");
+            mainWindow.Close();
             outputWindow.Show();
 
 
@@ -155,9 +160,7 @@ namespace Congratulations_generator
                     return;
                 }
             }
-            //clearFun();
-
-            
+            //clearFun(); 
         }
     }
 }

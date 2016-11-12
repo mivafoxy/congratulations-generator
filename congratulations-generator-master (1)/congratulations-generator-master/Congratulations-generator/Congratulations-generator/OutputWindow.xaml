@@ -27,9 +27,9 @@
                 <RowDefinition/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            <RadioButton x:Name="radioButton1" Grid.Column="0" Grid.Row="0" Margin="20,20" Cursor="Hand" VerticalAlignment="Bottom" HorizontalAlignment="Left" Checked="radioButton1_Checked"/>
+            <RadioButton x:Name="radioButton1" Grid.Column="0" Grid.Row="0" Margin="20,20" Cursor="Hand" VerticalAlignment="Bottom" HorizontalAlignment="Left" />
             <Image Grid.Column="0" Grid.Row="0" Margin="40,70,20,20" Name="Image1"/>
-            <RadioButton x:Name="radioButton2" Grid.Column="1" Grid.Row="0" Margin="20,20" Cursor="Hand" VerticalAlignment="Bottom" HorizontalAlignment="Left" Checked="radioButton2_Checked"/>
+            <RadioButton x:Name="radioButton2" Grid.Column="1" Grid.Row="0" Margin="20,20" Cursor="Hand" VerticalAlignment="Bottom" HorizontalAlignment="Left" />
             <Image Grid.Column="1" Grid.Row="0" Margin="40,70,20,20" Name="Image2"/>
             <RadioButton x:Name="radioButton3" Grid.Column="0" Grid.Row="1" Margin="20,20" Cursor="Hand" VerticalAlignment="Bottom" HorizontalAlignment="Left"/>
             <Image Grid.Column="0" Grid.Row="1" Margin="40,70,20,20" Name="Image3"/>
@@ -37,7 +37,7 @@
             <Image Grid.Column="1" Grid.Row="1" Margin="40,70,20,20" Name="Image4"/>
         </Grid>
         <Label x:Name="labelTitel" Grid.Row="0" Grid.Column="0" FontFamily="Segoe UI Semibold" FontSize="20" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,20,0,0">Текст поздравления</Label>
-        <RichTextBox x:Name="richTextBox" Grid.Row="0" Grid.Column="0" Width="450" FontFamily="Segoe UI Semilight" FontSize="20" Margin="70,60,70,10" Height="480" BorderBrush="#FF72C1F7" Background="#FFCCEEEE" TextChanged="RichTextBox_TextChanged" ScrollViewer.CanContentScroll="True" VerticalScrollBarVisibility="Visible"/>
+        <RichTextBox x:Name="richTextBox" Grid.Row="0" Grid.Column="0" Width="450" FontFamily="Segoe UI Semilight" FontSize="20" Margin="70,60,70,10" Height="480" BorderBrush="#FF72C1F7" Background="#FFCCEEEE" ScrollViewer.CanContentScroll="True" VerticalScrollBarVisibility="Visible"/>
         <Button x:Name="buttonCreateNew" Grid.Column="0" Grid.Row="1" Margin="261,18,36,24" FontSize="20" FontFamily="Segoe UI Semibold" Cursor="Hand" BorderBrush="#FF4AC2DB" RenderTransformOrigin="0.5,0.5" ForceCursor="True" Background="#FF4AC2DB" Height="77" MaxWidth="290" MaxHeight="68" Click="Button_Click" HorizontalAlignment="Center" VerticalAlignment="Center" Width="299">Сгенерировать новое</Button>
         <Button x:Name="buttonPast" Grid.Column="0" Grid.Row="1" Margin="33,18,363,24" FontSize="20" FontFamily="Segoe UI Semibold" Cursor="Hand" BorderBrush="#FF4AC2DB" RenderTransformOrigin="0.5,0.5" ForceCursor="True" Background="#FF4AC2DB" Height="77" MaxWidth="290" MaxHeight="68" Width="200" HorizontalAlignment="Center" VerticalAlignment="Center" Click="buttonPast_Click">Вернуться к анкете</Button>
         <Label x:Name="labelPicture" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,20,0,0" FontFamily="Segoe UI Semibold" FontSize="20">Выбор картинки</Label>

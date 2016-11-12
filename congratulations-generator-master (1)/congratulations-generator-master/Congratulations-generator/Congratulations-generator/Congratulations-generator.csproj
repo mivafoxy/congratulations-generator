@@ -71,6 +71,15 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Birthday_Cliche.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Birthday_Picture.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Birthday_Poem.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Holiday.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -105,9 +114,19 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
+    <Compile Include="New_Year_Cliche.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="New_Year_Picture.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="New_Year_Poem.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="OutputWindow.xaml.cs">
       <DependentUpon>OutputWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="People.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -179,6 +198,21 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="BD_Images\Birthday\4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="BD_Images\Birthday\1.jpg" />
+    <Resource Include="BD_Images\Birthday\2.jpg" />
+    <Resource Include="BD_Images\Birthday\3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="BD_Images\New_Year\1.jpg" />
+    <Resource Include="BD_Images\New_Year\2.jpg" />
+    <Resource Include="BD_Images\New_Year\3.jpg" />
+    <Resource Include="BD_Images\New_Year\4.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
