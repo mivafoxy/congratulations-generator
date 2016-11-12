@@ -31,7 +31,7 @@ namespace Congratulations_generator
             Image4.Source = new BitmapImage(new Uri("Images/pepe4.jpg", UriKind.Relative));*/
             if (People.dataObj.getHoliday() == "Новый Год")
             {
-                this.richTextBox1.AppendText(People.dataObj.getSalute() + " " + People.dataObj.getName() + " , " + returnPoemNE(1) + "\n\n\n" + People.dataObj.getSalute() + " " + People.dataObj.getName() + " , " + returnClicheNE(1));
+                this.richTextBox.AppendText(People.dataObj.getSalute() + " " + People.dataObj.getName() + " , " + returnPoemNE(1) + "\n\n\n" + People.dataObj.getSalute() + " " + People.dataObj.getName() + " , " + returnClicheNE(1));
                 Image1.Source = new BitmapImage(new Uri(returnWayPictureNE(1), UriKind.Relative));
                 Image2.Source = new BitmapImage(new Uri(returnWayPictureNE(2), UriKind.Relative));
                 Image3.Source = new BitmapImage(new Uri(returnWayPictureNE(3), UriKind.Relative));
@@ -40,7 +40,7 @@ namespace Congratulations_generator
             }
             if (People.dataObj.getHoliday() == "День Рождение")
             {
-                this.richTextBox1.AppendText(People.dataObj.getSalute() + " " + People.dataObj.getName() + " , " + returnPoemB(1) + "\n\n\n" + People.dataObj.getSalute() + " " + People.dataObj.getName() + " , " + returnClicheB(1));
+                this.richTextBox.AppendText(People.dataObj.getSalute() + " " + People.dataObj.getName() + " , " + returnPoemB(1) + "\n\n\n" + People.dataObj.getSalute() + " " + People.dataObj.getName() + " , " + returnClicheB(1));
                 Image1.Source = new BitmapImage(new Uri(returnWayPictureB(1), UriKind.Relative));
                 Image2.Source = new BitmapImage(new Uri(returnWayPictureB(2), UriKind.Relative));
                 Image3.Source = new BitmapImage(new Uri(returnWayPictureB(3), UriKind.Relative));
@@ -133,12 +133,6 @@ namespace Congratulations_generator
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
-        }
-
-        private void Button_Click_3(object sender, RoutedEventArgs e)
-        {
-            TotalWindow totalWindow = new TotalWindow();
-            totalWindow.Show();
         }
     }
 }
