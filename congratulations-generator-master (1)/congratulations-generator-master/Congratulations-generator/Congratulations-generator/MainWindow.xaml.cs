@@ -133,10 +133,8 @@ namespace Congratulations_generator
             //место для функции генирации стартового поздравления и картинок
             //не забыть закрыть первую форму при корректном заполнении
             //оставлять старые данные при возврате к анкете
-            //outputWindow.richTextBox.AppendText("Hello,World!\n");
-            //outputWindow.richTextBox.AppendText("Hello,Life!\n\n\n\n\n\n\n\n\n\n");
-            //outputWindow.richTextBox.AppendText("Hello,Friends!\n");
             mainWindow.Close();
+            outputWindow.richTextBox2.AppendText("Робит!!");
             outputWindow.Show();
 
 
