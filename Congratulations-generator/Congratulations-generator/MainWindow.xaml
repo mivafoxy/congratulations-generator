@@ -27,15 +27,15 @@
         <Label x:Name="labelMainWindow" Grid.Row="0" Grid.Column="0" IsEnabled="False" FontFamily="Rockwell" FontSize="20" FontWeight="Bold" Foreground="#FF020202" Content="Введите информацию о человеке, &#xD;&#xA;которого Вы хотите поздравить" Grid.ColumnSpan="2" Margin="0,22" TextOptions.TextHintingMode="Fixed" HorizontalAlignment="Left" VerticalAlignment="Center" Width="350"/>
         <Image Grid.Row="0" Grid.Column="1" Margin="163,5,0,47" Stretch="Fill" Name="Img1" Grid.RowSpan="2"/>
         <Label x:Name="labelName" Grid.Row="1" Grid.Column="0" Margin="0,5" >Имя</Label>
-        <TextBox x:Name="textBoxName" Grid.Row="1" Grid.Column="1" Padding="5, 5, 0,5" Margin="0,5,10,5" FontFamily="Segoe WP SemiLight" Background="#FFCCEEEE" Panel.ZIndex="10" BorderBrush="#FF72C1F7" TextChanged="TextBox_TextChanged"/>
+        <TextBox x:Name="textBoxName" Grid.Row="1" Grid.Column="1" Padding="5, 5, 0,5" Margin="0,5,10,5" FontFamily="Segoe WP SemiLight" Background="#FFCCEEEE" Panel.ZIndex="10" BorderBrush="#FF72C1F7"/>
         <Label x:Name="labelCall" Grid.Row="2" Grid.Column="0" Margin="0,5">Форма обращения</Label>
-        <TextBox x:Name="textBoxCall" Grid.Row="2" Grid.Column="1" Padding="5, 5, 0,5" Margin="0,0,10,10" FontFamily="Segoe WP SemiLight" Background="#FFCCEEEE" Panel.ZIndex="10" BorderBrush="#FF72C1F7" TextChanged="TextBox_TextChanged_1"/>
+        <TextBox x:Name="textBoxCall" Grid.Row="2" Grid.Column="1" Padding="5, 5, 0,5" Margin="0,0,10,10" FontFamily="Segoe WP SemiLight" Background="#FFCCEEEE" Panel.ZIndex="10" BorderBrush="#FF72C1F7"/>
         <Label x:Name="labelAge" Grid.Row="3" Grid.Column="0" Margin="0,5">Возраст</Label>
-        <ComboBox x:Name="textBoxSex" Grid.Row="3" Grid.Column="1" Padding="5, 5, 0,5" Margin="0,5,10,5"  Cursor="Hand" FontFamily="Segoe WP SemiLight" Panel.ZIndex="10" BorderBrush="#FF72C1F7" OpacityMask="#FFCCEEEE" Background="#FFCCEEEE" SelectionChanged="ComboBox_SelectionChanged"/>
+        <ComboBox x:Name="textBoxAge" Grid.Row="3" Grid.Column="1" Padding="5, 5, 0,5" Margin="0,5,10,5"  Cursor="Hand" FontFamily="Segoe WP SemiLight" Panel.ZIndex="10" BorderBrush="#FF72C1F7" OpacityMask="#FFCCEEEE" Background="#FFCCEEEE"/>
         <Label x:Name="labelSex" Grid.Row="4" Grid.Column="0" Margin="0,5">Пол</Label>
         <Grid Grid.Row="4" Grid.Column="1">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="30px"/>
+                <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="100px"/>
                 <ColumnDefinition Width="30px"/>
                 <ColumnDefinition Width="100px"/>
@@ -46,10 +46,10 @@
             <Label x:Name="labelWoman" Grid.Column="3" FontFamily="Segoe WP SemiLight"  Margin="0,5">Женский</Label>
         </Grid>
         <Label x:Name="labelInterests" Grid.Row="5" Grid.Column="0" Margin="0,5">Увлечения</Label>
-        <ComboBox x:Name="comboBoxInterests" Grid.Row="5" Grid.Column="1"  Cursor="Hand" Padding="5, 5, 0,5" Margin="0,5,10,5" FontFamily="Segoe WP SemiLight" Background="#FFCCEEEE" Panel.ZIndex="10" BorderBrush="#FF72C1F7" SelectionChanged="ComboBox_SelectionChanged_1"/>
+        <ComboBox x:Name="comboBoxInterests" Grid.Row="5" Grid.Column="1"  Cursor="Hand" Padding="5, 5, 0,5" Margin="0,5,10,5" FontFamily="Segoe WP SemiLight" Background="#FFCCEEEE" Panel.ZIndex="10" BorderBrush="#FF72C1F7"/>
         <Label x:Name="labelHoliday" Grid.Row="6" Grid.Column="0" Margin="0,5">Праздник</Label>
-        <ComboBox x:Name="comboBoxHoliday" Grid.Row="6" Grid.Column="1"  Cursor="Hand" Padding="5, 5, 0,5" Margin="0,5,10,5" FontFamily="Segoe WP SemiLight" Background="#FFCCEEEE" Panel.ZIndex="10" BorderBrush="#FF72C1F7" SelectionChanged="ComboBox_SelectionChanged_2"/>
-        <Button x:Name="buttonCreate" Grid.Row="7" Grid.Column="1" Padding="5, 5, 0,5" Margin="0,15,10,15" Cursor="Hand" BorderBrush="#FF4AC2DB" RenderTransformOrigin="0.5,0.5" ForceCursor="True" Background="#FF4AC2DB" Click="Button_Click" >Создать поздравление
+        <ComboBox x:Name="comboBoxHoliday" Grid.Row="6" Grid.Column="1"  Cursor="Hand" Padding="5, 5, 0,5" Margin="0,5,10,5" FontFamily="Segoe WP SemiLight" Background="#FFCCEEEE" Panel.ZIndex="10" BorderBrush="#FF72C1F7"/>
+        <Button x:Name="buttonCreate" Grid.Row="7" Grid.Column="1" Padding="5, 5, 0,5" Margin="0,15,10,15" Cursor="Hand" BorderBrush="#FF4AC2DB" RenderTransformOrigin="0.5,0.5" ForceCursor="True" Background="#FF4AC2DB" >Создать поздравление
         </Button>
     </Grid>
 </Window>
