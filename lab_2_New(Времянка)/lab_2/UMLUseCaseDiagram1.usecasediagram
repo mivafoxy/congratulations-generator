@@ -1,19 +1,77 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="7235e8a1-150b-470b-ad7c-e782e403ef5a" name="UMLUseCaseDiagram1" linkedPackageId="c96d6cc6-8fc4-4e05-933a-f4939c6d6714" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
-  <profileInstances>
-    <packageHasProfileInstances Id="2b5059c8-dd8c-4549-b239-8fe010a20c4b">
-      <profileInstance Id="a2a937de-0750-4349-b013-708fbea058c6" name="StandardProfileL2">
-        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
-      </profileInstance>
-      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="6c362b11-5925-464d-8571-66d0c80ca544">
-      <profileInstance Id="eed0b412-a977-49c1-840d-6217a6b72444" name="StandardProfileL3">
-        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
-      </profileInstance>
-      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
-    </packageHasProfileInstances>
-  </profileInstances>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="7235e8a1-150b-470b-ad7c-e782e403ef5a" name="UMLUseCaseDiagram1" linkedPackageId="c96d6cc6-8fc4-4e05-933a-f4939c6d6714" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <appliedStereotypesInternal>
+    <stereotypeInstance Id="79a6eded-d03e-4bcf-ba80-58ec6f46bae7" name="namespace" profile="CSharpProfile">
+      <elementDefinition Id="cad6f2fa-dfa4-4763-b489-f2b454bc5913" />
+      <propertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="1b85f521-337d-44e5-acdf-336ac038d147">
+          <propertyInstance Id="2c638b3e-af7f-48db-9016-eb1a59134cad" name="BaseName">
+            <elementDefinition Id="e6560ab4-6f3f-4f2e-81fd-34e240c25377" />
+          </propertyInstance>
+          <elementDefinition Id="2f322593-ba87-417c-a95b-daa8404392fb" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="824230a0-89b9-4c07-a7ba-c4d41b25ea3b">
+          <propertyInstance Id="c31637a9-01ad-4482-bf16-f318f8b85eaa" name="ClrAttributes">
+            <elementDefinition Id="99dd56e6-5f0f-47cd-a1b1-41b4689cb46e" />
+          </propertyInstance>
+          <elementDefinition Id="16f52c21-a4dd-4854-b26d-b42b0b0de850" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="1f7243ed-a8cb-48e3-a656-c791c510a16c">
+          <propertyInstance Id="c47ee703-c742-422a-ad19-6de77d87c3f6" name="Usings">
+            <elementDefinition Id="c555b821-60b2-4e61-b3eb-3a2ebd05eda2" />
+          </propertyInstance>
+          <elementDefinition Id="05258f7f-1081-42ee-9945-2bd1123689f0" />
+        </stereotypeInstanceHasPropertyInstances>
+      </propertyInstances>
+    </stereotypeInstance>
+    <stereotypeInstance Id="5a94016f-bf5a-4f50-8bc9-7b7d08c56a23" name="TextTemplateBindings" profile="TextTemplateBindings">
+      <elementDefinition Id="4d88d9aa-f6a8-47af-985d-22cb1f82a9ce" />
+      <propertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="f10286df-e751-416b-af3d-2ce3253cbdb5">
+          <propertyInstance Id="65247836-b245-4366-ba99-5af9e3fcc37f" name="Alias" value="ClassTemplate|EnumTemplate|InterfaceTemplate|StructTemplate">
+            <elementDefinition Id="8373db7a-f704-4d9c-bf36-be905f969fbf" />
+          </propertyInstance>
+          <elementDefinition Id="ea8f00ba-037a-42d2-b81d-7dcf04ea1f3a" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="f3f16165-3432-4962-a516-e1a0b1ddced3">
+          <propertyInstance Id="8b194f00-53f7-4c6e-9efd-421f3abefab1" name="TemplateFilePath" value="ClassTemplate=C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\ClassTemplate.t4|EnumTemplate=C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\EnumTemplate.t4|InterfaceTemplate=C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\InterfaceTemplate.t4|StructTemplate=C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\StructTemplate.t4">
+            <elementDefinition Id="b59c1207-33d0-40dd-8cec-a66d50aa45e5" />
+          </propertyInstance>
+          <elementDefinition Id="edcbf0a3-5d0f-4ff3-9001-beb7b2e99b90" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="5fd3b4c7-fdbf-4e54-a886-38bde4e418aa">
+          <propertyInstance Id="6b4c57f2-a2fd-4c72-92b9-5d92020da2e8" name="ProjectPath" value="ClassTemplate=..\lab_2Lib\lab_2Lib.csproj|EnumTemplate=..\lab_2Lib\lab_2Lib.csproj|InterfaceTemplate=..\lab_2Lib\lab_2Lib.csproj|StructTemplate=..\lab_2Lib\lab_2Lib.csproj">
+            <elementDefinition Id="89d6322c-71d1-47ca-96dd-0a48e7a267d2" />
+          </propertyInstance>
+          <elementDefinition Id="4f6421a6-420e-41d6-bd77-6b61810d683c" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="b0641cf9-f2ef-4141-976b-51e24c31646c">
+          <propertyInstance Id="113338cb-c9a3-458f-b8f7-d964103796f6" name="TargetDirectory" value="ClassTemplate=GeneratedCode\{PackageStructure}|EnumTemplate=GeneratedCode\{PackageStructure}|InterfaceTemplate=GeneratedCode\{PackageStructure}|StructTemplate=GeneratedCode\{PackageStructure}">
+            <elementDefinition Id="8b0d9c5c-e28c-4ba9-9ebd-9a933892cd1f" />
+          </propertyInstance>
+          <elementDefinition Id="4babaa97-322b-4ecd-8423-f9fcb6a8cf62" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="6fa21eaf-bd3b-4fbc-881d-bdac850f1bab">
+          <propertyInstance Id="40948ba4-3760-4e9c-90d2-04ca5b0ef160" name="TargetName" value="ClassTemplate={Name}|EnumTemplate={Name}|InterfaceTemplate={Name}|StructTemplate={Name}">
+            <elementDefinition Id="75080e8a-265a-424f-99f3-7e54287228cb" />
+          </propertyInstance>
+          <elementDefinition Id="c37e628f-d8cc-4029-8081-e886f7ded287" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="eaf662fb-8c46-4334-89b4-eabf00d1b03b">
+          <propertyInstance Id="9758af83-db84-42e2-a483-88f4e80c32db" name="Overwrite" value="ClassTemplate=True|EnumTemplate=True|InterfaceTemplate=True|StructTemplate=True">
+            <elementDefinition Id="1e83dcf4-2ad1-4e18-b301-5c45f73e53c6" />
+          </propertyInstance>
+          <elementDefinition Id="52f2acc9-6229-41e3-a4e2-702d36a1190d" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="8dd371b8-e0ef-4276-aeff-292145438aef">
+          <propertyInstance Id="2a6aee3c-d260-49e6-9b5a-70fe9bed6b12" name="Parameters">
+            <elementDefinition Id="0e3edb93-4bfd-4180-ab4b-594eecb8c987" />
+          </propertyInstance>
+          <elementDefinition Id="9058dd42-c387-4a92-9224-080990e1689f" />
+        </stereotypeInstanceHasPropertyInstances>
+      </propertyInstances>
+    </stereotypeInstance>
+  </appliedStereotypesInternal>
   <packagedElements>
     <useCaseModelRootHasTypes>
       <actor Id="8fe06042-fb3e-4b91-b9ce-b5c48a6dd538" name="Пользователь" isAbstract="false" isLeaf="false">
@@ -90,7 +148,7 @@
       </useCase>
     </packageHasNamedElement>
     <packageHasNamedElement>
-      <useCase Id="dbbda4ea-f6ff-423e-8e5c-e5dc045268a9" name="Ввод возраста" isAbstract="false" isLeaf="false">
+      <useCase Id="dbbda4ea-f6ff-423e-8e5c-e5dc045268a9" name="Выбор возраста" isAbstract="false" isLeaf="false">
         <elementDefinition Id="7bf89f9d-f38f-43af-8ecc-a92a788e0dd8" />
         <generalsInternal>
           <generalization Id="e22bf654-f4a7-47ba-82af-a8bdb9e9b082" isSubstitutable="false">
@@ -132,25 +190,19 @@
     <packageHasNamedElement>
       <useCase Id="a9a00d7d-157c-4044-9d2e-48bb9e229219" name="Выбор увлечений" isAbstract="false" isLeaf="false">
         <elementDefinition Id="273fe1e4-ca1c-4bd5-8742-c2383f025654" />
-        <generalsInternal>
-          <generalization Id="2f334a07-f6a6-401f-866b-49e03a7c921d" isSubstitutable="false">
+        <extendedCases>
+          <extend Id="d70e0c27-b4c6-4883-b080-611f533d0888">
             <useCaseMoniker Id="d2c5e040-71a8-41d7-860f-681dab6f8b88" LastKnownName="Ввод параметров " />
-            <elementDefinition Id="7fd45681-95fd-4e72-b614-a0127288d367" />
-          </generalization>
-        </generalsInternal>
-        <additions>
-          <include Id="f1144a2b-aafd-4248-a0b4-9eec9c57dbc2">
-            <useCaseMoniker Id="28937ca4-d60f-4ec1-8efc-cd116a7e633c" LastKnownName="Проверка корректности параметров" />
-            <elementDefinition Id="2c408e89-0866-4f92-928d-022fed482e28" />
-          </include>
-        </additions>
+            <elementDefinition Id="f697b053-1228-42bd-a8b5-18fc882619a5" />
+          </extend>
+        </extendedCases>
         <subjects>
           <subsystemMoniker Id="bf27d34e-bea4-4a61-9beb-b9da1581a626" LastKnownName="Системный модуль" />
         </subjects>
       </useCase>
     </packageHasNamedElement>
     <packageHasNamedElement>
-      <useCase Id="ff184be6-9aa1-4e6d-8bf1-82514a345896" name="Выбор обращения" isAbstract="false" isLeaf="false">
+      <useCase Id="ff184be6-9aa1-4e6d-8bf1-82514a345896" name="Ввод обращения" isAbstract="false" isLeaf="false">
         <elementDefinition Id="8a0d4b7b-688a-4e58-93f8-6f97ce1d604e" />
         <generalsInternal>
           <generalization Id="2a14054b-ade9-4ee1-84b3-1690a3848564" isSubstitutable="false">
@@ -236,6 +288,12 @@
     <packageHasNamedElement>
       <useCase Id="537a6890-5b51-4df8-a02d-614d494eac0e" name="Выбор поздравления" isAbstract="false" isLeaf="false">
         <elementDefinition Id="cf633e47-1c16-41e1-b5f8-b4572f794651" />
+        <additions>
+          <include Id="6540926a-e5f9-47b9-9169-eabef7161ca4">
+            <useCaseMoniker Id="0a17fa0a-bd5a-4825-aafe-118a6bfc0624" LastKnownName="Отправить поздравление" />
+            <elementDefinition Id="de398629-6585-4ac7-b06a-2dcd4b15dd43" />
+          </include>
+        </additions>
         <subjects>
           <subsystemMoniker Id="bf27d34e-bea4-4a61-9beb-b9da1581a626" LastKnownName="Системный модуль" />
         </subjects>
@@ -255,8 +313,50 @@
         </subjects>
       </useCase>
     </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="b7e094fc-2171-48d2-9427-fda1184d5ac8" name="Выбор праздника" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="51c16f5b-4a2a-49d1-af53-6b8e4d6aa4ca" />
+        <generalsInternal>
+          <generalization Id="19b5121a-1c52-43ed-a750-076cafabaed9" isSubstitutable="false">
+            <useCaseMoniker Id="d2c5e040-71a8-41d7-860f-681dab6f8b88" LastKnownName="Ввод параметров " />
+            <elementDefinition Id="0483fffb-555c-4293-b4f3-6fc5731f788a" />
+          </generalization>
+        </generalsInternal>
+        <additions>
+          <include Id="a851b06b-5bcc-49ec-b20a-755277737381">
+            <useCaseMoniker Id="28937ca4-d60f-4ec1-8efc-cd116a7e633c" LastKnownName="Проверка корректности параметров" />
+            <elementDefinition Id="43c03588-8642-4f9d-a61c-6cfe19b5bb22" />
+          </include>
+        </additions>
+        <subjects>
+          <subsystemMoniker Id="bf27d34e-bea4-4a61-9beb-b9da1581a626" LastKnownName="Системный модуль" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="0a17fa0a-bd5a-4825-aafe-118a6bfc0624" name="Отправить поздравление" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="8b9d9e97-6ac0-4c87-a7dd-ec701c6a92c8" />
+        <subjects>
+          <subsystemMoniker Id="bf27d34e-bea4-4a61-9beb-b9da1581a626" LastKnownName="Системный модуль" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
   </packagedElements>
   <package Id="c96d6cc6-8fc4-4e05-933a-f4939c6d6714" name="lab_2">
     <elementDefinition Id="ae1ba5ef-d36c-4253-8f11-7b48bf88f0ee" />
+    <profileInstances>
+      <packageHasProfileInstances Id="69eb9007-2500-4105-8df7-e9f3151ea64a">
+        <profileInstance Id="d14ab2aa-4bad-405c-be04-48fe25e42b99" name="CSharpProfile">
+          <elementDefinition Id="c6a8753d-9337-4488-bf51-e81fa400bf2d" />
+        </profileInstance>
+        <elementDefinition Id="f00d52f5-96bd-4590-87fe-235378a2dc7c" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="f7e1dbf3-e29e-4b54-aa10-9a82bc642859">
+        <profileInstance Id="99f8fe26-7d11-4edb-895a-95118420f21b" name="TextTemplateBindings">
+          <elementDefinition Id="6b2bf06d-3bb2-43cc-84da-e17eb41ee9bd" />
+        </profileInstance>
+        <elementDefinition Id="4962de5b-30e7-4e04-8a70-aab49539341a" />
+      </packageHasProfileInstances>
+    </profileInstances>
   </package>
 </useCaseModelRoot>

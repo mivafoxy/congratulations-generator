@@ -3,6 +3,12 @@
   dslVersion="1.0.0.0"
   Id="ae1ba5ef-d36c-4253-8f11-7b48bf88f0ee"
   name="lab_2" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <ownedCommentsInternal>
+    <comment
+      Id="b1aa8bb1-a508-4aae-b83b-f082537cb1f9">
+      <body>Остальные классы определяются таблицами базы данных, с которыми будет веститсь работа.</body>
+    </comment>
+  </ownedCommentsInternal>
   <appliedStereotypesInternal>
     <stereotypeInstance
       Id="cad6f2fa-dfa4-4763-b489-f2b454bc5913"
@@ -389,7 +395,7 @@
     <packageHasNamedElement>
       <useCase
         Id="7bf89f9d-f38f-43af-8ecc-a92a788e0dd8"
-        name="Ввод возраста"
+        name="Выбор возраста"
         isAbstract="false"
         isLeaf="false">
         <generalsInternal>
@@ -458,25 +464,15 @@
         name="Выбор увлечений"
         isAbstract="false"
         isLeaf="false">
-        <generalsInternal>
-          <generalization
-            Id="7fd45681-95fd-4e72-b614-a0127288d367"
-            isSubstitutable="false">
+        <extendedCases>
+          <extend
+            Id="f697b053-1228-42bd-a8b5-18fc882619a5">
             <useCaseMoniker
               Id="220e4fa7-7777-4d37-b0e8-07a959ffbc6f"
               LastKnownName="Ввод параметров "
               LastKnownLocation="lab_2.uml" />
-          </generalization>
-        </generalsInternal>
-        <additions>
-          <include
-            Id="2c408e89-0866-4f92-928d-022fed482e28">
-            <useCaseMoniker
-              Id="1bf479e7-2af0-43a8-bb29-2eb87b5dc7f5"
-              LastKnownName="Проверка корректности параметров"
-              LastKnownLocation="lab_2.uml" />
-          </include>
-        </additions>
+          </extend>
+        </extendedCases>
         <subjects>
           <subsystemMoniker
             Id="9005b0d9-bed7-4cc8-a6df-fc7c88128460"
@@ -488,7 +484,7 @@
     <packageHasNamedElement>
       <useCase
         Id="8a0d4b7b-688a-4e58-93f8-6f97ce1d604e"
-        name="Выбор обращения"
+        name="Ввод обращения"
         isAbstract="false"
         isLeaf="false">
         <generalsInternal>
@@ -637,6 +633,15 @@
         name="Выбор поздравления"
         isAbstract="false"
         isLeaf="false">
+        <additions>
+          <include
+            Id="de398629-6585-4ac7-b06a-2dcd4b15dd43">
+            <useCaseMoniker
+              Id="8b9d9e97-6ac0-4c87-a7dd-ec701c6a92c8"
+              LastKnownName="Отправить поздравление"
+              LastKnownLocation="lab_2.uml" />
+          </include>
+        </additions>
         <subjects>
           <subsystemMoniker
             Id="9005b0d9-bed7-4cc8-a6df-fc7c88128460"
@@ -777,7 +782,6 @@
           <property
             Id="c34bac01-cad8-448d-9e99-aaf913a8ac36"
             name="holiday"
-            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -844,16 +848,15 @@
               </stereotypeInstance>
             </appliedStereotypesInternal>
             <type_NamedElement>
-              <primitiveTypeMoniker
-                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
-                LastKnownName="String"
+              <undefinedTypeMoniker
+                Id="35f3af47-a0a9-489a-b95f-f2862bc61b4d"
+                LastKnownName="string"
                 LastKnownLocation="lab_2.uml" />
             </type_NamedElement>
           </property>
           <property
             Id="c928d5e2-b834-4f75-91f6-de2f0ee11235"
             name="sex"
-            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -920,16 +923,15 @@
               </stereotypeInstance>
             </appliedStereotypesInternal>
             <type_NamedElement>
-              <primitiveTypeMoniker
-                Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
-                LastKnownName="Boolean"
+              <undefinedTypeMoniker
+                Id="35f3af47-a0a9-489a-b95f-f2862bc61b4d"
+                LastKnownName="string"
                 LastKnownLocation="lab_2.uml" />
             </type_NamedElement>
           </property>
           <property
             Id="73f18dac-ba00-4205-9f31-289a57f9175d"
             name="age"
-            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -996,16 +998,15 @@
               </stereotypeInstance>
             </appliedStereotypesInternal>
             <type_NamedElement>
-              <primitiveTypeMoniker
-                Id="220a3521-e091-4221-bae9-3ef9018e845c"
-                LastKnownName="Integer"
+              <undefinedTypeMoniker
+                Id="68e4e5b0-bbb7-425b-8de3-85e24c11091c"
+                LastKnownName="int"
                 LastKnownLocation="lab_2.uml" />
             </type_NamedElement>
           </property>
           <property
             Id="63f9645c-39e3-4e10-a736-db1ac2952992"
             name="handling"
-            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -1072,16 +1073,15 @@
               </stereotypeInstance>
             </appliedStereotypesInternal>
             <type_NamedElement>
-              <primitiveTypeMoniker
-                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
-                LastKnownName="String"
+              <undefinedTypeMoniker
+                Id="35f3af47-a0a9-489a-b95f-f2862bc61b4d"
+                LastKnownName="string"
                 LastKnownLocation="lab_2.uml" />
             </type_NamedElement>
           </property>
           <property
             Id="af0f685d-c67c-4e5f-8baa-e70f3ce3ed7b"
             name="name"
-            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -1148,16 +1148,15 @@
               </stereotypeInstance>
             </appliedStereotypesInternal>
             <type_NamedElement>
-              <primitiveTypeMoniker
-                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
-                LastKnownName="String"
+              <undefinedTypeMoniker
+                Id="35f3af47-a0a9-489a-b95f-f2862bc61b4d"
+                LastKnownName="string"
                 LastKnownLocation="lab_2.uml" />
             </type_NamedElement>
           </property>
           <property
             Id="9c1d4e2b-3539-4b04-a5a2-5aab81c0d16b"
             name="interests"
-            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -1225,364 +1224,30 @@
             </appliedStereotypesInternal>
             <type_NamedElement>
               <undefinedTypeMoniker
-                Id="f46f4aad-b7eb-4289-a7ec-3a261384f867"
-                LastKnownName="String[]"
+                Id="35f3af47-a0a9-489a-b95f-f2862bc61b4d"
+                LastKnownName="string"
+                LastKnownLocation="lab_2.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="fe2b5eb2-0e10-4015-85a3-a0006b145a77"
+            name="id"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="68e4e5b0-bbb7-425b-8de3-85e24c11091c"
+                LastKnownName="int"
                 LastKnownLocation="lab_2.uml" />
             </type_NamedElement>
           </property>
         </ownedAttributesInternal>
-        <ownedOperationsInternal>
-          <operation
-            Id="b192e928-d2a1-4d09-9a08-62dab7931eb6"
-            name="Human"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <appliedStereotypesInternal>
-              <stereotypeInstance
-                Id="ea51e1f9-303a-40e7-b21e-fc2063048c7e"
-                name="method"
-                profile="CSharpProfile">
-                <propertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="aaef4910-f28e-4344-9a97-ee47764d201e">
-                    <propertyInstance
-                      Id="c7bf603c-e264-4de7-b47d-b5344c84d271"
-                      name="ClrAttributes" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="c4442fad-454a-436a-b5d8-41e8841ab7ee">
-                    <propertyInstance
-                      Id="c7e326ce-7e62-4e71-9aba-d847c5fd6d23"
-                      name="IsPartial"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="43b80c50-7d41-4fd8-ae78-f83911ec2610">
-                    <propertyInstance
-                      Id="4da042af-86d1-4184-9ec0-86502f2fcb49"
-                      name="IsUnsafe"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="7f17ba39-90fd-4492-8e0e-9d753cda3d3d">
-                    <propertyInstance
-                      Id="6e76410c-f0b3-4b2e-bcda-ca8ce6295497"
-                      name="Inheritance"
-                      value="none" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="ac746a2e-d4a8-4cbd-8f60-fcf9336876c2">
-                    <propertyInstance
-                      Id="78574d70-f76f-4693-85eb-d56a264f2b03"
-                      name="PackageVisibility"
-                      value="internal" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="b56c17ff-c130-4164-90f3-dc65b6bed2e4">
-                    <propertyInstance
-                      Id="2bd7f248-d66c-42c1-b4a3-bb0c5cf3d0d3"
-                      name="params"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                </propertyInstances>
-              </stereotypeInstance>
-            </appliedStereotypesInternal>
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="5bee74a8-6e47-4764-adef-5f8d44b459e7"
-                  name="kName"
-                  direction="In"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <primitiveTypeMoniker
-                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
-                      LastKnownName="String"
-                      LastKnownLocation="lab_2.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="cd644a76-1bd5-49e0-aa27-9495c7a1c72c"
-                  name="kHandling"
-                  direction="In"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <primitiveTypeMoniker
-                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
-                      LastKnownName="String"
-                      LastKnownLocation="lab_2.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="a5494bf2-15a4-4de1-8915-63efda8f6b9c"
-                  name="kAge"
-                  direction="In"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <primitiveTypeMoniker
-                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
-                      LastKnownName="Integer"
-                      LastKnownLocation="lab_2.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="ad0bace2-a567-4252-90e5-27346ea8d00b"
-                  name="kSex"
-                  direction="In"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <primitiveTypeMoniker
-                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
-                      LastKnownName="Boolean"
-                      LastKnownLocation="lab_2.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="45e7a0e2-290c-4ac0-9282-fbabf671048e"
-                  name="kInterests"
-                  direction="In"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <primitiveTypeMoniker
-                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
-                      LastKnownName="String"
-                      LastKnownLocation="lab_2.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="d50349ca-cc54-4ce6-adde-e2791d88baba"
-                  name="kHoliday"
-                  direction="In"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <primitiveTypeMoniker
-                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
-                      LastKnownName="String"
-                      LastKnownLocation="lab_2.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
-            Id="eb3873c1-8228-4407-9e53-791d48502e23"
-            name="Human"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <appliedStereotypesInternal>
-              <stereotypeInstance
-                Id="97271598-020d-49e4-bbb0-b1a9189b6ce6"
-                name="method"
-                profile="CSharpProfile">
-                <propertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="4a69be7f-2051-4073-82cb-99a21006fc3d">
-                    <propertyInstance
-                      Id="21ad6809-f288-41cf-b6b1-3ffa1d7fad00"
-                      name="ClrAttributes" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="b64e5eba-d890-4a6f-a6c9-201ce6f4a91a">
-                    <propertyInstance
-                      Id="fbb3ddfe-33f8-47ae-855b-3085625c5576"
-                      name="IsPartial"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="a7ff7fb4-5fbb-48d5-b8d1-1b30fe928748">
-                    <propertyInstance
-                      Id="d4583718-7387-4171-92f9-cf36bf89ae78"
-                      name="IsUnsafe"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="c4b68622-6821-4cb7-8579-3faef33833c4">
-                    <propertyInstance
-                      Id="b581a3c9-3d05-4680-ad55-eec380ab4563"
-                      name="Inheritance"
-                      value="none" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="9b6ac7bf-c758-4ae5-abd8-8ef1eefe3e49">
-                    <propertyInstance
-                      Id="126e1d61-3d8b-4144-b60f-86a5a3415b22"
-                      name="PackageVisibility"
-                      value="internal" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="43ac69ec-1dfe-443a-b98d-30243c3cd070">
-                    <propertyInstance
-                      Id="25d46858-fafc-49e5-9aff-3f97ee8890d6"
-                      name="params"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                </propertyInstances>
-              </stereotypeInstance>
-            </appliedStereotypesInternal>
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="632bbf24-85b4-444c-af81-062c66c7c079"
-                  name="kName"
-                  direction="In"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <primitiveTypeMoniker
-                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
-                      LastKnownName="String"
-                      LastKnownLocation="lab_2.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="36d3f1bb-0604-4a1d-8e05-fef1328a36e2"
-                  name="kHandling"
-                  direction="In"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <primitiveTypeMoniker
-                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
-                      LastKnownName="String"
-                      LastKnownLocation="lab_2.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="bb61f0db-1b2d-4c98-9801-577777ae57e5"
-                  name="kAge"
-                  direction="In"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <primitiveTypeMoniker
-                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
-                      LastKnownName="Integer"
-                      LastKnownLocation="lab_2.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="875a90da-4df9-4145-9bb9-2d1eb708e5c0"
-                  name="kSex"
-                  direction="In"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <primitiveTypeMoniker
-                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
-                      LastKnownName="Boolean"
-                      LastKnownLocation="lab_2.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="5370ed88-09e2-41d7-b7c6-f5e6696687fe"
-                  name="kHoliday"
-                  direction="In"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <primitiveTypeMoniker
-                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
-                      LastKnownName="String"
-                      LastKnownLocation="lab_2.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
-            Id="c9017578-70a1-4a70-ba60-354d1a9e5ead"
-            name="createCongratulation"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <appliedStereotypesInternal>
-              <stereotypeInstance
-                Id="348736e0-e7ed-4071-974e-ccb1c5b6b848"
-                name="method"
-                profile="CSharpProfile">
-                <propertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="273a66d7-7ccd-4d8b-953e-99032a81a0ed">
-                    <propertyInstance
-                      Id="fc6f353b-0ae2-445d-b19b-be8e016a2588"
-                      name="ClrAttributes" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="85fcfc28-18cc-4363-94cf-b9778d6d73fb">
-                    <propertyInstance
-                      Id="3c3fbb65-947e-4b1f-983c-6f878254ec9c"
-                      name="IsPartial"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="48e064fc-31a1-4801-9baf-bed863f40c7a">
-                    <propertyInstance
-                      Id="1a761f7b-0dba-403b-aacd-dd7f4c472d04"
-                      name="IsUnsafe"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="cf20e7ae-0f5a-4421-9fd1-1f079e0466d2">
-                    <propertyInstance
-                      Id="4d9f2b6a-36fb-4773-b492-70c192c2887a"
-                      name="Inheritance"
-                      value="none" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="4345bf37-4f94-429c-8614-92ace35ecded">
-                    <propertyInstance
-                      Id="88633018-3476-4678-ae06-faa4ebfd058e"
-                      name="PackageVisibility"
-                      value="internal" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="14429cd9-8f15-4a99-8626-eb0f8be1a429">
-                    <propertyInstance
-                      Id="b0d2d1ff-f2b2-4367-a18f-72c5ff1bc104"
-                      name="params"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                </propertyInstances>
-              </stereotypeInstance>
-            </appliedStereotypesInternal>
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="d156a864-f19f-44f4-8cdb-7a4d07d15bd5"
-                  direction="Return"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <classMoniker
-                      Id="674b0687-3345-45cb-94ee-b2c1d586ad5d"
-                      LastKnownName="Congratulation"
-                      LastKnownLocation="lab_2.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-        </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -1645,7 +1310,7 @@
             isAbstract="false">
             <classMoniker
               Id="e8c0e262-3c16-4008-aafe-032be8007972"
-              LastKnownName="OutputForm"
+              LastKnownName="OutputWindow"
               LastKnownLocation="lab_2.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
@@ -1677,82 +1342,6 @@
           </association>
         </targetEnds>
         <ownedAttributesInternal>
-          <property
-            Id="729cbd22-cd5f-45ec-b794-3ba9ec2d4449"
-            name="adressPicture"
-            visibility="Private"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isUnique="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false">
-            <appliedStereotypesInternal>
-              <stereotypeInstance
-                Id="99cb2f56-564b-4989-a80f-0d8d68121423"
-                name="property"
-                profile="CSharpProfile">
-                <propertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="304b0eda-4718-4de6-8d32-df3e632eb60e">
-                    <propertyInstance
-                      Id="bec3334f-97db-4cae-9860-db883b8b38d2"
-                      name="ClrAttributes" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="b12d92f8-3a0f-41e4-b51d-477eb863f604">
-                    <propertyInstance
-                      Id="0351a2b4-0842-4f50-8977-30ec1a441f6d"
-                      name="Get"
-                      value="none" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="9638a2f4-6ee5-44e4-b0e3-d3eed645f63a">
-                    <propertyInstance
-                      Id="467a8334-6872-4e36-bf5d-88a4662f9165"
-                      name="HasBody"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="c2dc6518-de5f-494f-be95-ae9a560d0661">
-                    <propertyInstance
-                      Id="3a4b9d72-a4bc-4b54-8f52-465579a4117f"
-                      name="IsUnsafe"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="448eeff5-0e6b-4ae5-96ba-3aee3f63302e">
-                    <propertyInstance
-                      Id="7824a7a7-1ce3-49cb-b0c1-d72f7bf15f54"
-                      name="Inheritance"
-                      value="none" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="8934ef29-78a2-4ad7-93c8-ed08ef75841c">
-                    <propertyInstance
-                      Id="f105f821-615c-4a10-b043-57adf4e908dc"
-                      name="PackageVisibility"
-                      value="internal" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="e01877f2-fde3-4e8a-9d30-3e97c85dc73a">
-                    <propertyInstance
-                      Id="b8fa7be9-ab36-4e83-8cef-1ef7e8b1f86d"
-                      name="Set"
-                      value="none" />
-                  </stereotypeInstanceHasPropertyInstances>
-                </propertyInstances>
-              </stereotypeInstance>
-            </appliedStereotypesInternal>
-            <type_NamedElement>
-              <primitiveTypeMoniker
-                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
-                LastKnownName="String"
-                LastKnownLocation="lab_2.uml" />
-            </type_NamedElement>
-          </property>
           <property
             Id="996e91ef-2687-4834-8912-b1583c02280a"
             name="cliche"
@@ -1824,14 +1413,14 @@
             </appliedStereotypesInternal>
             <type_NamedElement>
               <undefinedTypeMoniker
-                Id="f46f4aad-b7eb-4289-a7ec-3a261384f867"
-                LastKnownName="String[]"
+                Id="35f3af47-a0a9-489a-b95f-f2862bc61b4d"
+                LastKnownName="string"
                 LastKnownLocation="lab_2.uml" />
             </type_NamedElement>
           </property>
           <property
             Id="d5409af3-b702-467a-9cfc-73f8982b2c16"
-            name="verselet"
+            name="poem"
             visibility="Private"
             isLeaf="false"
             isStatic="false"
@@ -1900,193 +1489,35 @@
             </appliedStereotypesInternal>
             <type_NamedElement>
               <undefinedTypeMoniker
-                Id="f46f4aad-b7eb-4289-a7ec-3a261384f867"
-                LastKnownName="String[]"
+                Id="35f3af47-a0a9-489a-b95f-f2862bc61b4d"
+                LastKnownName="string"
+                LastKnownLocation="lab_2.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="86c06197-0bad-4f6e-bcdd-c61717a03cb2"
+            name="image"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="adadbc2a-dc59-47a0-a4e1-70123cb7b448"
+                LastKnownName="System.Windows.Media.ImageSource"
                 LastKnownLocation="lab_2.uml" />
             </type_NamedElement>
           </property>
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
-            Id="82218363-d5d9-4a6a-9737-17810bfcc50c"
-            name="Cogratulation"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <appliedStereotypesInternal>
-              <stereotypeInstance
-                Id="bf0e41c0-03e6-4da5-b407-8d7945abc33b"
-                name="method"
-                profile="CSharpProfile">
-                <propertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="144db45c-c8e5-46e9-b0bb-807c2526732e">
-                    <propertyInstance
-                      Id="45fc4d16-ff39-4f2f-93bb-ac73b6b11655"
-                      name="ClrAttributes" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="e5687a88-ad1f-4355-b71e-b118aaf42050">
-                    <propertyInstance
-                      Id="7cd7dd98-ff81-44af-b153-1e91df0351b2"
-                      name="IsPartial"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="2aac1ee8-1d53-4475-ad94-2535f5392634">
-                    <propertyInstance
-                      Id="d931b20c-7387-482b-811f-01b5af321c49"
-                      name="IsUnsafe"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="7b2a2bd9-4066-459d-822d-53450f91f668">
-                    <propertyInstance
-                      Id="93ece1c4-b772-4c6f-8a90-605ff91660c3"
-                      name="Inheritance"
-                      value="none" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="23c01e2c-34e6-4ff4-a87c-53f4a16e1d94">
-                    <propertyInstance
-                      Id="bc215f3f-deea-4f7e-9a6c-5efad4750823"
-                      name="PackageVisibility"
-                      value="internal" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="792fd10a-17a2-4125-9768-f5120d833bd1">
-                    <propertyInstance
-                      Id="a870f178-0c93-45e9-9e83-6842b5651104"
-                      name="params"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                </propertyInstances>
-              </stereotypeInstance>
-            </appliedStereotypesInternal>
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="eb316b2e-b23c-4168-9ff1-1c6c4e03aed4"
-                  name="kAdressPicture"
-                  direction="In"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <primitiveTypeMoniker
-                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
-                      LastKnownName="String"
-                      LastKnownLocation="lab_2.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="24aff444-f420-4d26-8d78-4f0fd75c2f55"
-                  name="kCliche"
-                  direction="In"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <primitiveTypeMoniker
-                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
-                      LastKnownName="String"
-                      LastKnownLocation="lab_2.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="f677327f-86ce-4aef-ac03-89e3d769928f"
-                  name="kVerselet"
-                  direction="In"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <primitiveTypeMoniker
-                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
-                      LastKnownName="String"
-                      LastKnownLocation="lab_2.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
-            Id="fb656d05-dd4c-4e19-93f8-be06d0e8aeca"
-            name="getAdressPicture"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <appliedStereotypesInternal>
-              <stereotypeInstance
-                Id="58023ad3-e8cd-4aae-bc37-5bd86abdb674"
-                name="method"
-                profile="CSharpProfile">
-                <propertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="93853793-da0b-44a4-b133-7166364f523d">
-                    <propertyInstance
-                      Id="f2668fa4-b10f-499c-bd6c-c0d975e69d8e"
-                      name="ClrAttributes" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="3629e049-6a68-42dc-b9d7-261ef7109871">
-                    <propertyInstance
-                      Id="7a3371a1-f92a-4cf5-b605-ff7a3b90ed78"
-                      name="IsPartial"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="c97ad3ca-c9c6-4cb2-b331-1d1c69574556">
-                    <propertyInstance
-                      Id="74df0c12-f645-4eab-9e37-0e217651f8df"
-                      name="IsUnsafe"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="deb9daa7-b87f-4a01-a764-569e811e9021">
-                    <propertyInstance
-                      Id="f5e45d3f-1945-4c9d-860a-92eb60857673"
-                      name="Inheritance"
-                      value="none" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="c1260463-ccdb-46a1-b2fd-a1422e856f15">
-                    <propertyInstance
-                      Id="9751fbfe-1f8e-4ba2-aef3-8521a7d5108e"
-                      name="PackageVisibility"
-                      value="internal" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="96d37956-828e-4527-9065-c8c9630ebb83">
-                    <propertyInstance
-                      Id="3d28f90e-3f77-43a3-b03c-97f3630ff43b"
-                      name="params"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                </propertyInstances>
-              </stereotypeInstance>
-            </appliedStereotypesInternal>
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="64030999-327e-4562-b496-f2443bf4c349"
-                  direction="Return"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <primitiveTypeMoniker
-                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
-                      LastKnownName="String"
-                      LastKnownLocation="lab_2.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
             Id="da865177-e386-41fc-87fc-208d00f4ba6b"
-            name="getCliche"
+            name="gsCliche"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
@@ -2150,8 +1581,8 @@
                   isUnique="false">
                   <type_NamedElement>
                     <undefinedTypeMoniker
-                      Id="f46f4aad-b7eb-4289-a7ec-3a261384f867"
-                      LastKnownName="String[]"
+                      Id="35f3af47-a0a9-489a-b95f-f2862bc61b4d"
+                      LastKnownName="string"
                       LastKnownLocation="lab_2.uml" />
                   </type_NamedElement>
                 </parameter>
@@ -2160,7 +1591,7 @@
           </operation>
           <operation
             Id="2f309e1c-66f5-43ea-9834-fedcee44f67b"
-            name="getVerselet"
+            name="gsPoem"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
@@ -2224,8 +1655,8 @@
                   isUnique="false">
                   <type_NamedElement>
                     <undefinedTypeMoniker
-                      Id="f46f4aad-b7eb-4289-a7ec-3a261384f867"
-                      LastKnownName="String[]"
+                      Id="35f3af47-a0a9-489a-b95f-f2862bc61b4d"
+                      LastKnownName="string"
                       LastKnownLocation="lab_2.uml" />
                   </type_NamedElement>
                 </parameter>
@@ -2234,7 +1665,7 @@
           </operation>
           <operation
             Id="5bae07d7-05b6-479b-8e3b-fdc98286ea0d"
-            name="showCongratulatiion"
+            name="show"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
@@ -2308,7 +1739,7 @@
           </operation>
           <operation
             Id="9d82a7cb-1e30-45fd-8e52-efbf4eb7c9ec"
-            name="getData"
+            name="gsImage"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
@@ -2367,37 +1798,13 @@
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="b77f015b-b81c-4a0f-bdca-8ebbab15c782"
+                  Id="6198d81b-5521-4588-b641-bfae2d5b8cad"
                   direction="Return"
                   isUnique="false">
                   <type_NamedElement>
                     <undefinedTypeMoniker
-                      Id="41a455e0-a1f5-4f5c-bc99-b0caaaed2d13"
-                      LastKnownName="void"
-                      LastKnownLocation="lab_2.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
-            Id="babe4d30-b9d3-46f8-8e0e-d05796fbd72c"
-            name="generatedCongratulation"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="33e3cfb1-7c4e-4573-bfb0-8f0c7568bf45"
-                  direction="Return"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <undefinedTypeMoniker
-                      Id="41a455e0-a1f5-4f5c-bc99-b0caaaed2d13"
-                      LastKnownName="void"
+                      Id="adadbc2a-dc59-47a0-a4e1-70123cb7b448"
+                      LastKnownName="System.Windows.Media.ImageSource"
                       LastKnownLocation="lab_2.uml" />
                   </type_NamedElement>
                 </parameter>
@@ -2500,7 +1907,7 @@
             <coveredLifelines>
               <lifelineMoniker
                 Id="c4bebdb8-da4c-4afe-83fd-7271abfa7837"
-                LastKnownName="Объект DataForm"
+                LastKnownName="Объект MainWindow"
                 LastKnownLocation="lab_2.uml" />
             </coveredLifelines>
             <finish>
@@ -2540,7 +1947,7 @@
             <covered>
               <lifelineMoniker
                 Id="c4bebdb8-da4c-4afe-83fd-7271abfa7837"
-                LastKnownName="Объект DataForm"
+                LastKnownName="Объект MainWindow"
                 LastKnownLocation="lab_2.uml" />
             </covered>
           </executionOccurrenceSpecification>
@@ -2550,7 +1957,7 @@
             <covered>
               <lifelineMoniker
                 Id="c4bebdb8-da4c-4afe-83fd-7271abfa7837"
-                LastKnownName="Объект DataForm"
+                LastKnownName="Объект MainWindow"
                 LastKnownLocation="lab_2.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -2565,22 +1972,22 @@
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="ad5becc6-7731-40bd-b335-239227b29d04"
-            name="MessageOccurrenceSpecification73">
-            <covered>
-              <lifelineMoniker
-                Id="c4bebdb8-da4c-4afe-83fd-7271abfa7837"
-                LastKnownName="Объект DataForm"
-                LastKnownLocation="lab_2.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
             Id="ce0f2432-a119-46c3-aec1-f8fe070c7e83"
             name="MessageOccurrenceSpecification74">
             <covered>
               <lifelineMoniker
                 Id="3b3d559e-c3ef-4d49-a60c-ebd1c9017b7d"
                 LastKnownName="Пользователь"
+                LastKnownLocation="lab_2.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="ad5becc6-7731-40bd-b335-239227b29d04"
+            name="MessageOccurrenceSpecification73">
+            <covered>
+              <lifelineMoniker
+                Id="c4bebdb8-da4c-4afe-83fd-7271abfa7837"
+                LastKnownName="Объект MainWindow"
                 LastKnownLocation="lab_2.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -2598,7 +2005,7 @@
             <covered>
               <lifelineMoniker
                 Id="c4bebdb8-da4c-4afe-83fd-7271abfa7837"
-                LastKnownName="Объект DataForm"
+                LastKnownName="Объект MainWindow"
                 LastKnownLocation="lab_2.uml" />
             </covered>
           </executionOccurrenceSpecification>
@@ -2608,7 +2015,7 @@
             <coveredLifelines>
               <lifelineMoniker
                 Id="c4bebdb8-da4c-4afe-83fd-7271abfa7837"
-                LastKnownName="Объект DataForm"
+                LastKnownName="Объект MainWindow"
                 LastKnownLocation="lab_2.uml" />
             </coveredLifelines>
             <finish>
@@ -2668,7 +2075,7 @@
             <covered>
               <lifelineMoniker
                 Id="c4bebdb8-da4c-4afe-83fd-7271abfa7837"
-                LastKnownName="Объект DataForm"
+                LastKnownName="Объект MainWindow"
                 LastKnownLocation="lab_2.uml" />
             </covered>
           </executionOccurrenceSpecification>
@@ -2688,7 +2095,7 @@
             <covered>
               <lifelineMoniker
                 Id="c4bebdb8-da4c-4afe-83fd-7271abfa7837"
-                LastKnownName="Объект DataForm"
+                LastKnownName="Объект MainWindow"
                 LastKnownLocation="lab_2.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -2698,7 +2105,7 @@
             <covered>
               <lifelineMoniker
                 Id="c4bebdb8-da4c-4afe-83fd-7271abfa7837"
-                LastKnownName="Объект DataForm"
+                LastKnownName="Объект MainWindow"
                 LastKnownLocation="lab_2.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -2708,7 +2115,7 @@
             <coveredLifelines>
               <lifelineMoniker
                 Id="c4bebdb8-da4c-4afe-83fd-7271abfa7837"
-                LastKnownName="Объект DataForm"
+                LastKnownName="Объект MainWindow"
                 LastKnownLocation="lab_2.uml" />
             </coveredLifelines>
             <finish>
@@ -2744,7 +2151,7 @@
             <covered>
               <lifelineMoniker
                 Id="c4bebdb8-da4c-4afe-83fd-7271abfa7837"
-                LastKnownName="Объект DataForm"
+                LastKnownName="Объект MainWindow"
                 LastKnownLocation="lab_2.uml" />
             </covered>
           </executionOccurrenceSpecification>
@@ -2754,7 +2161,7 @@
             <covered>
               <lifelineMoniker
                 Id="c4bebdb8-da4c-4afe-83fd-7271abfa7837"
-                LastKnownName="Объект DataForm"
+                LastKnownName="Объект MainWindow"
                 LastKnownLocation="lab_2.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -2772,7 +2179,7 @@
             <covered>
               <lifelineMoniker
                 Id="c4bebdb8-da4c-4afe-83fd-7271abfa7837"
-                LastKnownName="Объект DataForm"
+                LastKnownName="Объект MainWindow"
                 LastKnownLocation="lab_2.uml" />
             </covered>
           </executionOccurrenceSpecification>
@@ -2832,7 +2239,7 @@
             <covered>
               <lifelineMoniker
                 Id="c4bebdb8-da4c-4afe-83fd-7271abfa7837"
-                LastKnownName="Объект DataForm"
+                LastKnownName="Объект MainWindow"
                 LastKnownLocation="lab_2.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -2862,7 +2269,7 @@
             <covered>
               <lifelineMoniker
                 Id="c4bebdb8-da4c-4afe-83fd-7271abfa7837"
-                LastKnownName="Объект DataForm"
+                LastKnownName="Объект MainWindow"
                 LastKnownLocation="lab_2.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -2935,22 +2342,22 @@
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="15ab2841-9055-46fe-a2fb-0bb16318d7f7"
-            name="MessageOccurrenceSpecification85">
-            <covered>
-              <lifelineMoniker
-                Id="c4bebdb8-da4c-4afe-83fd-7271abfa7837"
-                LastKnownName="Объект DataForm"
-                LastKnownLocation="lab_2.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
             Id="0425a58a-5b5b-4afd-aea6-c1a8ed96ad6b"
             name="MessageOccurrenceSpecification86">
             <covered>
               <lifelineMoniker
                 Id="13e43af6-7b9d-4f0a-998e-e4f2a222695b"
                 LastKnownName="Объект Human"
+                LastKnownLocation="lab_2.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="15ab2841-9055-46fe-a2fb-0bb16318d7f7"
+            name="MessageOccurrenceSpecification85">
+            <covered>
+              <lifelineMoniker
+                Id="c4bebdb8-da4c-4afe-83fd-7271abfa7837"
+                LastKnownName="Объект MainWindow"
                 LastKnownLocation="lab_2.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -3054,7 +2461,7 @@
             <covered>
               <lifelineMoniker
                 Id="c4bebdb8-da4c-4afe-83fd-7271abfa7837"
-                LastKnownName="Объект DataForm"
+                LastKnownName="Объект MainWindow"
                 LastKnownLocation="lab_2.uml" />
             </covered>
           </executionOccurrenceSpecification>
@@ -3129,16 +2536,6 @@
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="2a75b756-9c49-4c72-ab0e-4f65e91173cf"
-            name="MessageOccurrenceSpecification89">
-            <covered>
-              <lifelineMoniker
-                Id="a67f969f-4a96-4c8f-ab81-d1e305ac3b6d"
-                LastKnownName="Объект Congratulatoin"
-                LastKnownLocation="lab_2.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
             Id="f9de61e4-a4c3-483e-bd3d-ea62950b78b7"
             name="MessageOccurrenceSpecification90">
             <covered>
@@ -3149,8 +2546,8 @@
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="234598c8-ff4c-4734-ace7-d495226e2942"
-            name="MessageOccurrenceSpecification92">
+            Id="2a75b756-9c49-4c72-ab0e-4f65e91173cf"
+            name="MessageOccurrenceSpecification89">
             <covered>
               <lifelineMoniker
                 Id="a67f969f-4a96-4c8f-ab81-d1e305ac3b6d"
@@ -3165,6 +2562,16 @@
               <lifelineMoniker
                 Id="b8f74e2e-335c-449c-9dd4-3fe97b5ef846"
                 LastKnownName="База данных"
+                LastKnownLocation="lab_2.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="234598c8-ff4c-4734-ace7-d495226e2942"
+            name="MessageOccurrenceSpecification92">
+            <covered>
+              <lifelineMoniker
+                Id="a67f969f-4a96-4c8f-ab81-d1e305ac3b6d"
+                LastKnownName="Объект Congratulatoin"
                 LastKnownLocation="lab_2.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -3237,22 +2644,22 @@
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="396bc472-c0d3-40b6-b865-9b402dd9b6de"
-            name="MessageOccurrenceSpecification94">
-            <covered>
-              <lifelineMoniker
-                Id="b8f74e2e-335c-449c-9dd4-3fe97b5ef846"
-                LastKnownName="База данных"
-                LastKnownLocation="lab_2.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
             Id="48a8bbc7-4c1d-4362-a5b6-12213d266811"
             name="MessageOccurrenceSpecification93">
             <covered>
               <lifelineMoniker
                 Id="a67f969f-4a96-4c8f-ab81-d1e305ac3b6d"
                 LastKnownName="Объект Congratulatoin"
+                LastKnownLocation="lab_2.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="396bc472-c0d3-40b6-b865-9b402dd9b6de"
+            name="MessageOccurrenceSpecification94">
+            <covered>
+              <lifelineMoniker
+                Id="b8f74e2e-335c-449c-9dd4-3fe97b5ef846"
+                LastKnownName="База данных"
                 LastKnownLocation="lab_2.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -3275,22 +2682,22 @@
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="0a544ae3-8649-4c25-af03-03004693150a"
-            name="MessageOccurrenceSpecification96">
-            <covered>
-              <lifelineMoniker
-                Id="a67f969f-4a96-4c8f-ab81-d1e305ac3b6d"
-                LastKnownName="Объект Congratulatoin"
-                LastKnownLocation="lab_2.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
             Id="ac0fda78-0ddd-443d-98e0-1abb26dce5c8"
             name="MessageOccurrenceSpecification95">
             <covered>
               <lifelineMoniker
                 Id="b8f74e2e-335c-449c-9dd4-3fe97b5ef846"
                 LastKnownName="База данных"
+                LastKnownLocation="lab_2.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="0a544ae3-8649-4c25-af03-03004693150a"
+            name="MessageOccurrenceSpecification96">
+            <covered>
+              <lifelineMoniker
+                Id="a67f969f-4a96-4c8f-ab81-d1e305ac3b6d"
+                LastKnownName="Объект Congratulatoin"
                 LastKnownLocation="lab_2.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -3363,22 +2770,22 @@
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="d0eb64e4-01b2-433f-bd83-44417b1f48d0"
-            name="MessageOccurrenceSpecification97">
-            <covered>
-              <lifelineMoniker
-                Id="a67f969f-4a96-4c8f-ab81-d1e305ac3b6d"
-                LastKnownName="Объект Congratulatoin"
-                LastKnownLocation="lab_2.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
             Id="8a3cdb8c-c60d-4324-97e9-1f096d7e23fd"
             name="MessageOccurrenceSpecification98">
             <covered>
               <lifelineMoniker
                 Id="b8f74e2e-335c-449c-9dd4-3fe97b5ef846"
                 LastKnownName="База данных"
+                LastKnownLocation="lab_2.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="d0eb64e4-01b2-433f-bd83-44417b1f48d0"
+            name="MessageOccurrenceSpecification97">
+            <covered>
+              <lifelineMoniker
+                Id="a67f969f-4a96-4c8f-ab81-d1e305ac3b6d"
+                LastKnownName="Объект Congratulatoin"
                 LastKnownLocation="lab_2.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -3510,7 +2917,7 @@
             <coveredLifelines>
               <lifelineMoniker
                 Id="7e7da7d2-d914-41ad-835b-adf9c5882e05"
-                LastKnownName="Объект OutputForm"
+                LastKnownName="Объект OutputWindow"
                 LastKnownLocation="lab_2.uml" />
             </coveredLifelines>
             <finish>
@@ -3539,8 +2946,8 @@
                 LastKnownName="MessageOccurrenceSpecification108"
                 LastKnownLocation="lab_2.uml" />
               <messageOccurrenceSpecificationMoniker
-                Id="0fc793e1-32d8-4342-b49a-da19d46794da"
-                LastKnownName="MessageOccurrenceSpecification123"
+                Id="fbfc3290-3691-4023-b742-89b994993f6f"
+                LastKnownName="MessageOccurrenceSpecification137"
                 LastKnownLocation="lab_2.uml" />
             </nestedOccurrences>
           </behaviorExecutionSpecification>
@@ -3558,10 +2965,20 @@
             <covered>
               <lifelineMoniker
                 Id="7e7da7d2-d914-41ad-835b-adf9c5882e05"
-                LastKnownName="Объект OutputForm"
+                LastKnownName="Объект OutputWindow"
                 LastKnownLocation="lab_2.uml" />
             </covered>
           </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="32be4d98-0e86-4eb1-b5e3-42826b6afa73"
+            name="MessageOccurrenceSpecification102">
+            <covered>
+              <lifelineMoniker
+                Id="7e7da7d2-d914-41ad-835b-adf9c5882e05"
+                LastKnownName="Объект OutputWindow"
+                LastKnownLocation="lab_2.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
           <messageOccurrenceSpecification
             Id="43905acb-9585-4bb2-9b23-767789a8b209"
             name="MessageOccurrenceSpecification101">
@@ -3569,16 +2986,6 @@
               <lifelineMoniker
                 Id="a67f969f-4a96-4c8f-ab81-d1e305ac3b6d"
                 LastKnownName="Объект Congratulatoin"
-                LastKnownLocation="lab_2.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="32be4d98-0e86-4eb1-b5e3-42826b6afa73"
-            name="MessageOccurrenceSpecification102">
-            <covered>
-              <lifelineMoniker
-                Id="7e7da7d2-d914-41ad-835b-adf9c5882e05"
-                LastKnownName="Объект OutputForm"
                 LastKnownLocation="lab_2.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -3666,7 +3073,17 @@
             <covered>
               <lifelineMoniker
                 Id="7e7da7d2-d914-41ad-835b-adf9c5882e05"
-                LastKnownName="Объект OutputForm"
+                LastKnownName="Объект OutputWindow"
+                LastKnownLocation="lab_2.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="7914e3da-5a5a-43e2-a091-0606f06ef796"
+            name="MessageOccurrenceSpecification108">
+            <covered>
+              <lifelineMoniker
+                Id="7e7da7d2-d914-41ad-835b-adf9c5882e05"
+                LastKnownName="Объект OutputWindow"
                 LastKnownLocation="lab_2.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -3677,16 +3094,6 @@
               <lifelineMoniker
                 Id="3b3d559e-c3ef-4d49-a60c-ebd1c9017b7d"
                 LastKnownName="Пользователь"
-                LastKnownLocation="lab_2.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="7914e3da-5a5a-43e2-a091-0606f06ef796"
-            name="MessageOccurrenceSpecification108">
-            <covered>
-              <lifelineMoniker
-                Id="7e7da7d2-d914-41ad-835b-adf9c5882e05"
-                LastKnownName="Объект OutputForm"
                 LastKnownLocation="lab_2.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -3709,71 +3116,89 @@
             </covered>
           </executionOccurrenceSpecification>
           <behaviorExecutionSpecification
-            Id="1a7b8a88-da0f-4c5b-bba1-57c401d08d60"
-            name="BehaviorExecutionSpecification39">
+            Id="72a77418-08eb-4052-8cc1-2963db4f260e"
+            name="BehaviorExecutionSpecification43">
             <coveredLifelines>
               <lifelineMoniker
-                Id="3b3d559e-c3ef-4d49-a60c-ebd1c9017b7d"
-                LastKnownName="Пользователь"
+                Id="8be0e47f-c6c4-4d3b-b365-1114f044991e"
+                LastKnownName="Объект TotalWindow"
                 LastKnownLocation="lab_2.uml" />
             </coveredLifelines>
             <finish>
               <executionOccurrenceSpecificationMoniker
-                Id="daf4c136-eae1-4c80-b249-136ccd2c35f2"
-                LastKnownName="ExecutionOccurrenceSpecification78"
+                Id="088f77db-7252-4ebf-b626-fc94ac4b7eec"
+                LastKnownName="ExecutionOccurrenceSpecification86"
                 LastKnownLocation="lab_2.uml" />
             </finish>
             <start>
               <executionOccurrenceSpecificationMoniker
-                Id="71f21044-600e-4b56-9d21-c38f1d23c3ae"
-                LastKnownName="ExecutionOccurrenceSpecification77"
+                Id="bc386cdf-63a1-401f-b6b2-63f31fbca90f"
+                LastKnownName="ExecutionOccurrenceSpecification85"
                 LastKnownLocation="lab_2.uml" />
             </start>
             <nestedOccurrences>
               <messageOccurrenceSpecificationMoniker
-                Id="d20b79df-ca1c-4a0b-984d-73dfd82edea2"
-                LastKnownName="MessageOccurrenceSpecification124"
+                Id="399eecc6-06d8-4d27-af81-ec515f11f7fe"
+                LastKnownName="MessageOccurrenceSpecification138"
                 LastKnownLocation="lab_2.uml" />
             </nestedOccurrences>
           </behaviorExecutionSpecification>
           <executionOccurrenceSpecification
-            Id="71f21044-600e-4b56-9d21-c38f1d23c3ae"
-            name="ExecutionOccurrenceSpecification77">
+            Id="bc386cdf-63a1-401f-b6b2-63f31fbca90f"
+            name="ExecutionOccurrenceSpecification85">
             <event>
               <executionOccurrenceSpecificationReferencesEvent>
                 <executionEventMoniker
-                  Id="eca8db1d-9dea-40b7-aca1-7bc46226fc3b"
+                  Id="3be9f4cd-f0b0-491f-806e-f80e9684db39"
                   LastKnownName="ExecutionEvent"
                   LastKnownLocation="lab_2.uml" />
               </executionOccurrenceSpecificationReferencesEvent>
             </event>
             <covered>
               <lifelineMoniker
-                Id="3b3d559e-c3ef-4d49-a60c-ebd1c9017b7d"
-                LastKnownName="Пользователь"
+                Id="8be0e47f-c6c4-4d3b-b365-1114f044991e"
+                LastKnownName="Объект TotalWindow"
                 LastKnownLocation="lab_2.uml" />
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="0fc793e1-32d8-4342-b49a-da19d46794da"
-            name="MessageOccurrenceSpecification123">
+            Id="fbfc3290-3691-4023-b742-89b994993f6f"
+            name="MessageOccurrenceSpecification137">
             <covered>
               <lifelineMoniker
                 Id="7e7da7d2-d914-41ad-835b-adf9c5882e05"
-                LastKnownName="Объект OutputForm"
+                LastKnownName="Объект OutputWindow"
                 LastKnownLocation="lab_2.uml" />
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="d20b79df-ca1c-4a0b-984d-73dfd82edea2"
-            name="MessageOccurrenceSpecification124">
+            Id="399eecc6-06d8-4d27-af81-ec515f11f7fe"
+            name="MessageOccurrenceSpecification138">
             <covered>
               <lifelineMoniker
-                Id="3b3d559e-c3ef-4d49-a60c-ebd1c9017b7d"
-                LastKnownName="Пользователь"
+                Id="8be0e47f-c6c4-4d3b-b365-1114f044991e"
+                LastKnownName="Объект TotalWindow"
                 LastKnownLocation="lab_2.uml" />
             </covered>
           </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="088f77db-7252-4ebf-b626-fc94ac4b7eec"
+            name="ExecutionOccurrenceSpecification86">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="8a09d21c-5fb7-4272-8e65-f53cfcb3e7a7"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="lab_2.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="8be0e47f-c6c4-4d3b-b365-1114f044991e"
+                LastKnownName="Объект TotalWindow"
+                LastKnownLocation="lab_2.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
           <executionOccurrenceSpecification
             Id="7f36e5a1-279c-4ee5-9826-da5866414cb2"
             name="ExecutionOccurrenceSpecification64">
@@ -3788,17 +3213,199 @@
             <covered>
               <lifelineMoniker
                 Id="7e7da7d2-d914-41ad-835b-adf9c5882e05"
-                LastKnownName="Объект OutputForm"
+                LastKnownName="Объект OutputWindow"
+                LastKnownLocation="lab_2.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="0e180868-32cf-4608-a712-2b2e759da19d"
+            name="BehaviorExecutionSpecification44">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="3b3d559e-c3ef-4d49-a60c-ebd1c9017b7d"
+                LastKnownName="Пользователь"
+                LastKnownLocation="lab_2.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="17e860d7-7f64-46b4-922a-5f322718bdc6"
+                LastKnownName="ExecutionOccurrenceSpecification88"
+                LastKnownLocation="lab_2.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="8278d7a7-aa70-4a03-90f2-30b3a87f0f3b"
+                LastKnownName="ExecutionOccurrenceSpecification87"
+                LastKnownLocation="lab_2.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="a78d3d38-341b-4a04-95c9-90b02421865a"
+                LastKnownName="MessageOccurrenceSpecification140"
+                LastKnownLocation="lab_2.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="d06998bc-9cdb-4c6f-aee0-a5b4a2357a7e"
+                LastKnownName="MessageOccurrenceSpecification141"
+                LastKnownLocation="lab_2.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="2663c679-3503-42f7-a5f6-9d87a9dfa09c"
+                LastKnownName="MessageOccurrenceSpecification144"
+                LastKnownLocation="lab_2.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="8278d7a7-aa70-4a03-90f2-30b3a87f0f3b"
+            name="ExecutionOccurrenceSpecification87">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="ed1133c3-2343-4395-8ec8-b95874d23988"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="lab_2.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="3b3d559e-c3ef-4d49-a60c-ebd1c9017b7d"
+                LastKnownName="Пользователь"
+                LastKnownLocation="lab_2.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="8f4b678a-3b7f-4029-a1c2-27eff5af71b5"
+            name="MessageOccurrenceSpecification139">
+            <covered>
+              <lifelineMoniker
+                Id="8be0e47f-c6c4-4d3b-b365-1114f044991e"
+                LastKnownName="Объект TotalWindow"
+                LastKnownLocation="lab_2.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="a78d3d38-341b-4a04-95c9-90b02421865a"
+            name="MessageOccurrenceSpecification140">
+            <covered>
+              <lifelineMoniker
+                Id="3b3d559e-c3ef-4d49-a60c-ebd1c9017b7d"
+                LastKnownName="Пользователь"
+                LastKnownLocation="lab_2.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="c24e44b8-dbcd-4387-831f-5f263a277bd7"
+            name="BehaviorExecutionSpecification45">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="8be0e47f-c6c4-4d3b-b365-1114f044991e"
+                LastKnownName="Объект TotalWindow"
+                LastKnownLocation="lab_2.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="ebf8cf2d-2bd9-4fe4-8215-d2bd7313a64d"
+                LastKnownName="ExecutionOccurrenceSpecification90"
+                LastKnownLocation="lab_2.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="8cdc2ed3-26b6-456d-9a54-de27d5e0275a"
+                LastKnownName="ExecutionOccurrenceSpecification89"
+                LastKnownLocation="lab_2.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="1f550e0a-df85-4fce-a28d-34b36b3bbbf3"
+                LastKnownName="MessageOccurrenceSpecification142"
+                LastKnownLocation="lab_2.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="949c8bd1-0d02-493d-88cf-658577aab4e8"
+                LastKnownName="MessageOccurrenceSpecification143"
+                LastKnownLocation="lab_2.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="8cdc2ed3-26b6-456d-9a54-de27d5e0275a"
+            name="ExecutionOccurrenceSpecification89">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="5db11cf6-4dea-498c-ad5e-da4f5c802709"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="lab_2.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="8be0e47f-c6c4-4d3b-b365-1114f044991e"
+                LastKnownName="Объект TotalWindow"
+                LastKnownLocation="lab_2.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="1f550e0a-df85-4fce-a28d-34b36b3bbbf3"
+            name="MessageOccurrenceSpecification142">
+            <covered>
+              <lifelineMoniker
+                Id="8be0e47f-c6c4-4d3b-b365-1114f044991e"
+                LastKnownName="Объект TotalWindow"
+                LastKnownLocation="lab_2.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="d06998bc-9cdb-4c6f-aee0-a5b4a2357a7e"
+            name="MessageOccurrenceSpecification141">
+            <covered>
+              <lifelineMoniker
+                Id="3b3d559e-c3ef-4d49-a60c-ebd1c9017b7d"
+                LastKnownName="Пользователь"
+                LastKnownLocation="lab_2.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="949c8bd1-0d02-493d-88cf-658577aab4e8"
+            name="MessageOccurrenceSpecification143">
+            <covered>
+              <lifelineMoniker
+                Id="8be0e47f-c6c4-4d3b-b365-1114f044991e"
+                LastKnownName="Объект TotalWindow"
+                LastKnownLocation="lab_2.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="2663c679-3503-42f7-a5f6-9d87a9dfa09c"
+            name="MessageOccurrenceSpecification144">
+            <covered>
+              <lifelineMoniker
+                Id="3b3d559e-c3ef-4d49-a60c-ebd1c9017b7d"
+                LastKnownName="Пользователь"
+                LastKnownLocation="lab_2.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="ebf8cf2d-2bd9-4fe4-8215-d2bd7313a64d"
+            name="ExecutionOccurrenceSpecification90">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="34fa0f17-1e28-4c53-8e7f-bd5d96e7a9a8"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="lab_2.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="8be0e47f-c6c4-4d3b-b365-1114f044991e"
+                LastKnownName="Объект TotalWindow"
                 LastKnownLocation="lab_2.uml" />
             </covered>
           </executionOccurrenceSpecification>
           <executionOccurrenceSpecification
-            Id="daf4c136-eae1-4c80-b249-136ccd2c35f2"
-            name="ExecutionOccurrenceSpecification78">
+            Id="17e860d7-7f64-46b4-922a-5f322718bdc6"
+            name="ExecutionOccurrenceSpecification88">
             <event>
               <executionOccurrenceSpecificationReferencesEvent>
                 <executionEventMoniker
-                  Id="280f23ed-405f-4360-b716-5ff31e8e27fd"
+                  Id="c7ab8e28-6632-410e-a2e5-2f0b3561beae"
                   LastKnownName="ExecutionEvent"
                   LastKnownLocation="lab_2.uml" />
               </executionOccurrenceSpecificationReferencesEvent>
@@ -3873,12 +3480,12 @@
                 LastKnownName="ExecutionOccurrenceSpecification68"
                 LastKnownLocation="lab_2.uml" />
               <executionOccurrenceSpecificationMoniker
-                Id="71f21044-600e-4b56-9d21-c38f1d23c3ae"
-                LastKnownName="ExecutionOccurrenceSpecification77"
+                Id="8278d7a7-aa70-4a03-90f2-30b3a87f0f3b"
+                LastKnownName="ExecutionOccurrenceSpecification87"
                 LastKnownLocation="lab_2.uml" />
               <executionOccurrenceSpecificationMoniker
-                Id="daf4c136-eae1-4c80-b249-136ccd2c35f2"
-                LastKnownName="ExecutionOccurrenceSpecification78"
+                Id="17e860d7-7f64-46b4-922a-5f322718bdc6"
+                LastKnownName="ExecutionOccurrenceSpecification88"
                 LastKnownLocation="lab_2.uml" />
               <messageOccurrenceSpecificationMoniker
                 Id="37fc0f26-b6f8-45fc-9946-f9df0926e5cf"
@@ -3888,9 +3495,9 @@
           </lifeline>
           <lifeline
             Id="c4bebdb8-da4c-4afe-83fd-7271abfa7837"
-            name="Объект DataForm"
+            name="Объект MainWindow"
             isActor="false"
-            lifelineDisplayName="Объект DataForm">
+            lifelineDisplayName="Объект MainWindow">
             <topLevelOccurrences>
               <executionOccurrenceSpecificationMoniker
                 Id="2e44861a-715a-4dfb-8c77-82a0f54311ec"
@@ -3976,9 +3583,9 @@
           </lifeline>
           <lifeline
             Id="7e7da7d2-d914-41ad-835b-adf9c5882e05"
-            name="Объект OutputForm"
+            name="Объект OutputWindow"
             isActor="false"
-            lifelineDisplayName="Объект OutputForm">
+            lifelineDisplayName="Объект OutputWindow">
             <topLevelOccurrences>
               <executionOccurrenceSpecificationMoniker
                 Id="3154c32c-bb8e-470d-87cb-103a58ff808b"
@@ -3987,6 +3594,34 @@
               <executionOccurrenceSpecificationMoniker
                 Id="7f36e5a1-279c-4ee5-9826-da5866414cb2"
                 LastKnownName="ExecutionOccurrenceSpecification64"
+                LastKnownLocation="lab_2.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="8be0e47f-c6c4-4d3b-b365-1114f044991e"
+            name="Объект TotalWindow"
+            isActor="false"
+            lifelineDisplayName="Объект TotalWindow">
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker
+                Id="bc386cdf-63a1-401f-b6b2-63f31fbca90f"
+                LastKnownName="ExecutionOccurrenceSpecification85"
+                LastKnownLocation="lab_2.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="088f77db-7252-4ebf-b626-fc94ac4b7eec"
+                LastKnownName="ExecutionOccurrenceSpecification86"
+                LastKnownLocation="lab_2.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="8f4b678a-3b7f-4029-a1c2-27eff5af71b5"
+                LastKnownName="MessageOccurrenceSpecification139"
+                LastKnownLocation="lab_2.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="8cdc2ed3-26b6-456d-9a54-de27d5e0275a"
+                LastKnownName="ExecutionOccurrenceSpecification89"
+                LastKnownLocation="lab_2.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="ebf8cf2d-2bd9-4fe4-8215-d2bd7313a64d"
+                LastKnownName="ExecutionOccurrenceSpecification90"
                 LastKnownLocation="lab_2.uml" />
             </topLevelOccurrences>
           </lifeline>
@@ -4354,21 +3989,78 @@
             </receiveEvent>
           </message>
           <message
-            Id="34a44b5d-ac2b-420e-8ab8-74aa4305b6c6"
-            name="Закрытие окна вывода()"
+            Id="1d63de50-f416-455a-8ce5-f0e37b74da6a"
+            name="Открыть()"
             messageKind="Complete"
             messageSort="AsynchCall"
             createSelfMessage="false">
             <sendEvent>
               <messageOccurrenceSpecificationMoniker
-                Id="0fc793e1-32d8-4342-b49a-da19d46794da"
-                LastKnownName="MessageOccurrenceSpecification123"
+                Id="fbfc3290-3691-4023-b742-89b994993f6f"
+                LastKnownName="MessageOccurrenceSpecification137"
                 LastKnownLocation="lab_2.uml" />
             </sendEvent>
             <receiveEvent>
               <messageOccurrenceSpecificationMoniker
-                Id="d20b79df-ca1c-4a0b-984d-73dfd82edea2"
-                LastKnownName="MessageOccurrenceSpecification124"
+                Id="399eecc6-06d8-4d27-af81-ec515f11f7fe"
+                LastKnownName="MessageOccurrenceSpecification138"
+                LastKnownLocation="lab_2.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="7cac1161-f0d4-44f6-a183-2576e38b3b0a"
+            name="Вывод выбранных элементов поздравлений()"
+            messageKind="Complete"
+            messageSort="AsynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="8f4b678a-3b7f-4029-a1c2-27eff5af71b5"
+                LastKnownName="MessageOccurrenceSpecification139"
+                LastKnownLocation="lab_2.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="a78d3d38-341b-4a04-95c9-90b02421865a"
+                LastKnownName="MessageOccurrenceSpecification140"
+                LastKnownLocation="lab_2.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="5080de80-d3ed-4c99-8e65-19464c80cfbd"
+            name="Выбор соц.сети()"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="d06998bc-9cdb-4c6f-aee0-a5b4a2357a7e"
+                LastKnownName="MessageOccurrenceSpecification141"
+                LastKnownLocation="lab_2.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="1f550e0a-df85-4fce-a28d-34b36b3bbbf3"
+                LastKnownName="MessageOccurrenceSpecification142"
+                LastKnownLocation="lab_2.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="96573773-e857-439b-bb4a-a1d568626d33"
+            name="Открытие браузера()"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="949c8bd1-0d02-493d-88cf-658577aab4e8"
+                LastKnownName="MessageOccurrenceSpecification143"
+                LastKnownLocation="lab_2.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="2663c679-3503-42f7-a5f6-9d87a9dfa09c"
+                LastKnownName="MessageOccurrenceSpecification144"
                 LastKnownLocation="lab_2.uml" />
             </receiveEvent>
           </message>
@@ -4430,7 +4122,7 @@
     <packageHasNamedElement>
       <class
         Id="72891439-f516-4011-a465-7ec2fef6d8bd"
-        name="DataForm"
+        name="MainWindow"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
@@ -4477,86 +4169,8 @@
         </targetEnds>
         <ownedOperationsInternal>
           <operation
-            Id="2a842560-9680-4edc-be75-d66d4582b7bc"
-            name="title_Click"
-            visibility="Private"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="21bafbca-9b92-4495-991c-0389f755e86f"
-                  direction="Return"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <undefinedTypeMoniker
-                      Id="41a455e0-a1f5-4f5c-bc99-b0caaaed2d13"
-                      LastKnownName="void"
-                      LastKnownLocation="lab_2.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="51922292-e4b0-4be1-a56b-929d87462941"
-                  name="object sender"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="a3e30199-131c-4285-9387-28fdc71f82cf"
-                  name="EventArgs e"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
-            Id="bebacfa2-bf3c-41da-9e4b-7f88a690b748"
-            name="name_Click"
-            visibility="Private"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="6c9b1ff3-664d-4971-a7cc-3d33f8e3c68e"
-                  direction="Return"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <undefinedTypeMoniker
-                      Id="41a455e0-a1f5-4f5c-bc99-b0caaaed2d13"
-                      LastKnownName="void"
-                      LastKnownLocation="lab_2.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="dca86401-8dd5-4103-a2f5-f977ef637c86"
-                  name="object sender"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="2bd2f8bb-fb8c-4ec6-9818-094abc13cb17"
-                  name="EventArgs e"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
             Id="465f9d6b-22e3-4db5-bfb7-856d152c35e9"
-            name="handling_Click"
+            name="recordData"
             visibility="Private"
             isLeaf="false"
             isStatic="false"
@@ -4579,15 +4193,8 @@
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="801d2a5a-3d63-4eab-a562-54aada86e00d"
-                  name="object sender"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="16cf1ba4-5713-4671-966d-274962f0ae12"
-                  name="EventArgs e"
+                  Id="b2c13c84-7b26-4d9a-8cf0-d039ab2a47ff"
+                  name="string sex"
                   direction="In"
                   isUnique="false" />
               </operationHasOwnedParameters>
@@ -4595,7 +4202,7 @@
           </operation>
           <operation
             Id="c8d20d71-7a37-4061-91ea-ef5f0d25ec2a"
-            name="age_Click"
+            name="insertToDataBase"
             visibility="Private"
             isLeaf="false"
             isStatic="false"
@@ -4618,54 +4225,8 @@
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="664f2e80-c78a-4010-9a9a-be58dec1e696"
-                  name="object sender"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="5c1268ac-22b4-4867-804a-917c0bab7462"
-                  name="EventArgs e"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
-            Id="7e1c14ae-4112-4d2c-9942-c2096bd146d2"
-            name="sex_Click"
-            visibility="Private"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="f5bb4cb5-824c-4a5f-aa49-066e3a88dd04"
-                  direction="Return"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <undefinedTypeMoniker
-                      Id="41a455e0-a1f5-4f5c-bc99-b0caaaed2d13"
-                      LastKnownName="void"
-                      LastKnownLocation="lab_2.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="cd548945-a26d-4b67-a458-444db3df7c90"
-                  name="object sender"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="1ce1c64e-be6a-43ef-baa4-6fbcad6e0f89"
-                  name="EventArgs e"
+                  Id="f1c95c2f-ae65-4040-a461-fddb7f1da700"
+                  name="List &lt;Human&gt; lct"
                   direction="In"
                   isUnique="false" />
               </operationHasOwnedParameters>
@@ -4673,7 +4234,7 @@
           </operation>
           <operation
             Id="b474be92-614e-4292-b5e7-fa8c8c4c7194"
-            name="interests_Click"
+            name="Button_Click"
             visibility="Private"
             isLeaf="false"
             isStatic="false"
@@ -4696,15 +4257,15 @@
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="3cba5bfd-a6bc-49ff-a0d9-752ace8e7305"
+                  Id="707f75d7-60b5-4bd4-9751-fd6a089c5235"
                   name="object sender"
                   direction="In"
                   isUnique="false" />
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="d29ee660-652d-4d5c-8309-7a828c27ed2b"
-                  name="EventArgs e"
+                  Id="512d7d7c-388a-4d3e-aee1-b4caba53e75d"
+                  name="RoutedEventArgs e"
                   direction="In"
                   isUnique="false" />
               </operationHasOwnedParameters>
@@ -4712,7 +4273,7 @@
           </operation>
           <operation
             Id="3fadc804-c253-40ca-af25-d45d0d71f89b"
-            name="holiday_Click"
+            name="errorEvents"
             visibility="Private"
             isLeaf="false"
             isStatic="false"
@@ -4727,187 +4288,17 @@
                   isUnique="false">
                   <type_NamedElement>
                     <undefinedTypeMoniker
-                      Id="41a455e0-a1f5-4f5c-bc99-b0caaaed2d13"
-                      LastKnownName="void"
+                      Id="508cb0f6-6156-48f3-bb1f-78faf9105f66"
+                      LastKnownName="bool"
                       LastKnownLocation="lab_2.uml" />
                   </type_NamedElement>
                 </parameter>
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="13e4b583-7899-4a48-bef2-03a55e5095a1"
-                  name="object sender"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="4c2b4a2b-5017-487f-b713-ff8fbca7d812"
-                  name="EventArgs e"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
-            Id="dfb1a05d-281e-4b71-9803-6e31ab127da8"
-            name="radioButtonMan_CheckedChanged"
-            visibility="Private"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="da54c68e-b033-4792-a7fb-6a460d27ec8d"
-                  direction="Return"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <undefinedTypeMoniker
-                      Id="41a455e0-a1f5-4f5c-bc99-b0caaaed2d13"
-                      LastKnownName="void"
-                      LastKnownLocation="lab_2.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="f43f7992-d87e-48a8-903b-bad99cfc3430"
-                  name="object sender"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="5aa6969c-9bc1-49c2-87fb-7c28fae3016e"
-                  name="EventArgs e"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
-            Id="490e48cc-a6f3-47fe-b615-9e0728baba03"
-            name="radioButtonWoman_CheckedChanged"
-            visibility="Private"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="39b9ed5c-a839-4b4b-b5ec-2643994c81ba"
-                  direction="Return"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <undefinedTypeMoniker
-                      Id="41a455e0-a1f5-4f5c-bc99-b0caaaed2d13"
-                      LastKnownName="void"
-                      LastKnownLocation="lab_2.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="fee01de6-9999-42cd-9ed0-0d493490a8ac"
-                  name="object sender"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="50114a7a-7294-4b7d-8337-ac1404560329"
-                  name="EventArgs e"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
-            Id="96f639c9-45c3-47db-ab6b-35c58c17dd6d"
-            name="textBoxName_TextChanged"
-            visibility="Private"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="af682979-2724-4605-b606-29327497006a"
-                  direction="Return"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <undefinedTypeMoniker
-                      Id="41a455e0-a1f5-4f5c-bc99-b0caaaed2d13"
-                      LastKnownName="void"
-                      LastKnownLocation="lab_2.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="eaf167f4-484c-4464-971d-2604069c2098"
-                  name="object sender"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="b2da23d2-ce91-4f6a-a0ff-8af5df558e5a"
-                  name="EventArgs e"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
-            Id="2aad1534-2da1-4ce7-b57d-5801c87d3237"
-            name="textBoxHandling_TextChanged"
-            visibility="Private"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="12a986eb-483b-4a1c-8a0b-4b4f1c458a67"
-                  direction="Return"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <undefinedTypeMoniker
-                      Id="41a455e0-a1f5-4f5c-bc99-b0caaaed2d13"
-                      LastKnownName="void"
-                      LastKnownLocation="lab_2.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="6cb1fa08-8ce8-44a8-9492-77bcce5ae933"
-                  name="object sender"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="bacf815a-25ed-4e83-994e-3a2f3ed6e547"
-                  name="EventArgs e"
-                  direction="In"
-                  isUnique="false" />
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
           <operation
             Id="a6e2486c-0ca0-41e3-8273-25b3c56c9366"
-            name="comboBoxAge_SelectedIndexChanged"
+            name="createHobbiesComboBox"
             visibility="Private"
             isLeaf="false"
             isStatic="false"
@@ -4917,22 +4308,9 @@
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="d3d73145-ab04-4db4-8926-a2a6d38d992a"
-                  name="object sender"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="860fe4bd-3ee9-43f7-8b4a-610f145318fd"
-                  name="EventArgs e"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
                   Id="1c3220d5-3654-4e0d-ba9f-542b109b60e9"
-                  direction="Return">
+                  direction="Return"
+                  isUnique="false">
                   <type_NamedElement>
                     <undefinedTypeMoniker
                       Id="41a455e0-a1f5-4f5c-bc99-b0caaaed2d13"
@@ -4945,7 +4323,7 @@
           </operation>
           <operation
             Id="58d1fff9-c23c-462c-971c-88a948089c8d"
-            name="comboBoxInterests_SelectedIndexChanged"
+            name="createtextBoxAge"
             visibility="Private"
             isLeaf="false"
             isStatic="false"
@@ -4966,25 +4344,11 @@
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="340e8947-d369-4671-9cec-b8b39f9658b3"
-                  name="object sender"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="e7b4bf7e-98cd-42a4-bc14-1f67a9471e78"
-                  name="EventArgs e"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
           <operation
             Id="8fc6a89f-8ff1-434c-bf6c-3030b9ee1e73"
-            name="comboBoxHoliday_SelectedIndexChanged"
+            name="createcomboBoxHoliday"
             visibility="Private"
             isLeaf="false"
             isStatic="false"
@@ -5005,25 +4369,11 @@
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="2c748a5e-2aa1-4575-9522-f7182d0ee6a8"
-                  name="object sender"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="b24a23d0-5077-4c04-9232-8c4e1a8015b6"
-                  name="EventArgs e"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
           <operation
             Id="7c02f163-b3c9-4a7e-90a8-4ee65851b5fd"
-            name="buttonDataInput_Click"
+            name="returnLastId"
             visibility="Private"
             isLeaf="false"
             isStatic="false"
@@ -5038,31 +4388,17 @@
                   isUnique="false">
                   <type_NamedElement>
                     <undefinedTypeMoniker
-                      Id="41a455e0-a1f5-4f5c-bc99-b0caaaed2d13"
-                      LastKnownName="void"
+                      Id="68e4e5b0-bbb7-425b-8de3-85e24c11091c"
+                      LastKnownName="int"
                       LastKnownLocation="lab_2.uml" />
                   </type_NamedElement>
                 </parameter>
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="167aa38c-d562-4247-867f-1c7a7a6f28d9"
-                  name="object sender"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="95219c7f-0355-44dc-92c6-fb728609b41c"
-                  name="EventArgs e"
-                  direction="In"
-                  isUnique="false" />
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
           <operation
             Id="5c70af82-7d98-4cc1-846e-d0458bb607ee"
-            name="DataForm"
+            name="MainWindow"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
@@ -5070,7 +4406,7 @@
             isQuery="false" />
           <operation
             Id="734a7b61-e4c3-4905-981a-ea7e86ed5f91"
-            name="DataForm_Load"
+            name="checkLog"
             visibility="Private"
             isLeaf="false"
             isStatic="false"
@@ -5080,26 +4416,13 @@
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="17fcd65d-d170-4757-8a02-7f4ead95848b"
-                  name="object sender"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="21ed6e31-dc10-4eaa-94ce-a02d0e6d4481"
-                  name="EventArgs e"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
                   Id="2142ebaa-6f01-422d-9210-e2e8ef6a58fb"
-                  direction="Return">
+                  direction="Return"
+                  isUnique="false">
                   <type_NamedElement>
                     <undefinedTypeMoniker
-                      Id="41a455e0-a1f5-4f5c-bc99-b0caaaed2d13"
-                      LastKnownName="void"
+                      Id="508cb0f6-6156-48f3-bb1f-78faf9105f66"
+                      LastKnownName="bool"
                       LastKnownLocation="lab_2.uml" />
                   </type_NamedElement>
                 </parameter>
@@ -5112,14 +4435,55 @@
     <packageHasNamedElement>
       <class
         Id="e8c0e262-3c16-4008-aafe-032be8007972"
-        name="OutputForm"
+        name="OutputWindow"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="b1d8605c-3d89-4bff-9229-03a524f4b793"
+            isDerived="false"
+            sourceEndRoleName="OutputWindow"
+            targetEndRoleName="TotalWindow"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="df07cc6e-5080-4cda-a5ab-53ba060d0981"
+              LastKnownName="TotalWindow"
+              LastKnownLocation="lab_2.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e916ad45-c66a-4b78-92d2-b79ea391adce"
+                  name="OutputWindow"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="02f6666a-630a-4cc5-bbf7-9270f47c03de"
+                  name="TotalWindow"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
         <ownedOperationsInternal>
           <operation
             Id="24213081-0c30-4e01-8e8f-950671b7696d"
-            name="pictureBox1_Click"
+            name="refreshButton1_Click"
             visibility="Private"
             isLeaf="false"
             isStatic="false"
@@ -5142,15 +4506,15 @@
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="fc032fa7-78cb-4ad8-ba5b-7f3d09a0213d"
+                  Id="6f9b071c-04a6-4d23-9dc9-c97fa62ee352"
                   name="object sender"
                   direction="In"
                   isUnique="false" />
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="5d97a8d4-ab5c-4fab-b339-fe74c6766ec8"
-                  name="EventArgs e"
+                  Id="161c106e-f861-4677-b47d-f4d1a0df6f9a"
+                  name="RoutedEventArgs e"
                   direction="In"
                   isUnique="false" />
               </operationHasOwnedParameters>
@@ -5158,7 +4522,7 @@
           </operation>
           <operation
             Id="a58bbc5c-d829-4011-9810-35d3826d9095"
-            name="pictureBox2_Click"
+            name="refreshButton2_Click"
             visibility="Private"
             isLeaf="false"
             isStatic="false"
@@ -5181,15 +4545,15 @@
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="0b7be6a8-f71c-4517-a10d-3c4d92fbfafd"
+                  Id="6be37c86-f89a-4e51-8953-13cbfc81a54c"
                   name="object sender"
                   direction="In"
                   isUnique="false" />
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="748fe56a-a951-4575-8fb1-51f37bf12f86"
-                  name="EventArgs e"
+                  Id="fdd2166b-e7c0-4315-8e82-d61c1341cd3c"
+                  name="RoutedEventArgs e"
                   direction="In"
                   isUnique="false" />
               </operationHasOwnedParameters>
@@ -5197,7 +4561,7 @@
           </operation>
           <operation
             Id="d2f19b65-591d-45a1-856e-cf849e9a705c"
-            name="pictureBox3_Click"
+            name="refreshButton3_Click"
             visibility="Private"
             isLeaf="false"
             isStatic="false"
@@ -5220,288 +4584,15 @@
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="715d01e7-ba40-4a4b-a39d-0f819e866ddb"
+                  Id="f5471f5c-2405-41c4-abaa-bd857d309584"
                   name="object sender"
                   direction="In"
                   isUnique="false" />
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="1ec9f7ce-de06-4df7-9e33-37c9328cd043"
-                  name="EventArgs e"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
-            Id="30e65938-19e7-403e-8685-6c6abea1f3f6"
-            name="pictureBoxVK_Click"
-            visibility="Private"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="b9177892-30d5-4204-b65f-1173a81d5219"
-                  direction="Return"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <undefinedTypeMoniker
-                      Id="41a455e0-a1f5-4f5c-bc99-b0caaaed2d13"
-                      LastKnownName="void"
-                      LastKnownLocation="lab_2.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="2efad997-bc2a-452d-a739-05299c446419"
-                  name="object sender"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="a31a2829-843f-420d-9ee1-5733414bb81f"
-                  name="EventArgs e"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
-            Id="df28dcfd-d122-4066-b210-ab4b11f2a6de"
-            name="pictureBoxFB_Click"
-            visibility="Private"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="79e67996-4b62-4e8b-8205-280250d34020"
-                  direction="Return"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <undefinedTypeMoniker
-                      Id="41a455e0-a1f5-4f5c-bc99-b0caaaed2d13"
-                      LastKnownName="void"
-                      LastKnownLocation="lab_2.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="bcc3b7eb-ef26-4540-86c2-cd7f014aa002"
-                  name="object sender"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="0102c7b6-ac25-4157-8360-449ec1a704b6"
-                  name="EventArgs e"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
-            Id="d293bc3d-4937-41a2-86e9-9943ee6640ca"
-            name="pictureBoxOK_Click"
-            visibility="Private"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="c42393c8-f593-4127-ad05-60602cce5b44"
-                  direction="Return"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <undefinedTypeMoniker
-                      Id="41a455e0-a1f5-4f5c-bc99-b0caaaed2d13"
-                      LastKnownName="void"
-                      LastKnownLocation="lab_2.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="14591d0b-4144-4e2f-8192-f37cc0f2d816"
-                  name="object sender"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="86289145-8514-47c9-9131-fbb412dae7af"
-                  name="EventArgs e"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
-            Id="dfe00ada-2f09-4ec9-9652-7b6060353786"
-            name="radioButtonImage1_CheckedChanged"
-            visibility="Private"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="e7656ff7-783f-4143-ada0-853ae62fcdd7"
-                  direction="Return"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <undefinedTypeMoniker
-                      Id="41a455e0-a1f5-4f5c-bc99-b0caaaed2d13"
-                      LastKnownName="void"
-                      LastKnownLocation="lab_2.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="399d15c8-769e-43e0-8e0a-fd21ab4ed9ad"
-                  name="object sender"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="45b1448f-bf79-4ad7-8eca-91e6b523c16e"
-                  name="EventArgs e"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
-            Id="54327675-e50e-4fca-8aeb-26b49ddab044"
-            name="radioButtonImage2_CheckedChanged"
-            visibility="Private"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="c3bdc9d9-cdad-47a9-ba95-00c3600d9227"
-                  direction="Return"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <undefinedTypeMoniker
-                      Id="41a455e0-a1f5-4f5c-bc99-b0caaaed2d13"
-                      LastKnownName="void"
-                      LastKnownLocation="lab_2.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="23169163-61c9-4852-ba31-86f156f880a1"
-                  name="object sender"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="61ff99d7-d148-41fb-a92c-465b7ba6a886"
-                  name="EventArgs e"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
-            Id="a27a20fc-1e22-415f-b619-5bdb5acbc14e"
-            name="radioButtonImage3_CheckedChanged"
-            visibility="Private"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="f631ce99-6e26-4452-bd63-f7f4af160cd2"
-                  direction="Return"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <undefinedTypeMoniker
-                      Id="41a455e0-a1f5-4f5c-bc99-b0caaaed2d13"
-                      LastKnownName="void"
-                      LastKnownLocation="lab_2.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="b1e7cef3-a3f3-4702-b3ab-cc4c098db92f"
-                  name="object sender"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="61dc1b60-1f46-4494-abf8-4a1348021442"
-                  name="EventArgs e"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
-            Id="15d49984-5220-431b-b182-28c7184b6fe6"
-            name="textBoxText_TextChanged"
-            visibility="Private"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="6cac47a7-0319-4ace-8131-70ebfb1517ff"
-                  direction="Return"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <undefinedTypeMoniker
-                      Id="41a455e0-a1f5-4f5c-bc99-b0caaaed2d13"
-                      LastKnownName="void"
-                      LastKnownLocation="lab_2.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="d08f9415-dbb2-4828-9def-a127e3474c38"
-                  name="object sender"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="8118da61-25b2-4adc-8115-be1fd1244c19"
-                  name="EventArgs e"
+                  Id="8540111a-2abe-410b-8fb2-b9e24bf92604"
+                  name="RoutedEventArgs e"
                   direction="In"
                   isUnique="false" />
               </operationHasOwnedParameters>
@@ -5509,7 +4600,7 @@
           </operation>
           <operation
             Id="d612c262-8c93-44e6-ae40-3284247159d6"
-            name="buttonExit_Click"
+            name="Button_Click_2"
             visibility="Private"
             isLeaf="false"
             isStatic="false"
@@ -5532,8 +4623,15 @@
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="6be9fdbd-3d93-4445-a2c4-ee5dd9d434b0"
-                  name="buttonExit_Click"
+                  Id="76cae1d0-e936-435a-8eb8-1ccf59975085"
+                  name="object sender"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="cb7b0101-db1c-4808-a734-be68a8831f97"
+                  name="RoutedEventArgs e"
                   direction="In"
                   isUnique="false" />
               </operationHasOwnedParameters>
@@ -5541,7 +4639,7 @@
           </operation>
           <operation
             Id="4c545ecf-17a5-467b-9bd8-2656a50b63ac"
-            name="buttonGenerateNew_Click"
+            name="buttonPast_Click"
             visibility="Private"
             isLeaf="false"
             isStatic="false"
@@ -5564,15 +4662,15 @@
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="c224289e-2a91-4af7-867b-0c77d6302e85"
+                  Id="94341f32-7a4b-4f5c-a0a9-de4312ffe967"
                   name="object sender"
                   direction="In"
                   isUnique="false" />
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="f29179c8-718b-450e-b63f-674e23298745"
-                  name="EventArgs e"
+                  Id="0317f952-38b1-495e-b438-9da8116a2b3f"
+                  name="RoutedEventArgs e"
                   direction="In"
                   isUnique="false" />
               </operationHasOwnedParameters>
@@ -5580,7 +4678,7 @@
           </operation>
           <operation
             Id="ac4abe11-56ef-4681-8143-c47c529f5379"
-            name="OutputForm"
+            name="OutputWindow"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
@@ -5588,7 +4686,7 @@
             isQuery="false" />
           <operation
             Id="d76e8c66-2974-4aa7-82f5-50b1a24953b8"
-            name="OutputForm_Load"
+            name="Button_Click_3"
             visibility="Private"
             isLeaf="false"
             isStatic="false"
@@ -5599,7 +4697,8 @@
               <operationHasOwnedParameters>
                 <parameter
                   Id="c78df8b0-6998-4a0c-a693-34c8d26e9d2e"
-                  direction="Return">
+                  direction="Return"
+                  isUnique="false">
                   <type_NamedElement>
                     <undefinedTypeMoniker
                       Id="41a455e0-a1f5-4f5c-bc99-b0caaaed2d13"
@@ -5610,17 +4709,56 @@
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="fba4f3d2-064e-4a8b-87a2-d243a45c2c96"
+                  Id="d0bc6b29-5d96-4939-bc79-625c2dd77bc9"
                   name="object sender"
                   direction="In"
                   isUnique="false" />
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="12f02dbe-2bc7-4304-baba-c103cf59c9d0"
-                  name="EventArgs e"
+                  Id="e74f12b7-6838-4957-86a0-1c02ce93c440"
+                  name="RoutedEventArgs e"
                   direction="In"
                   isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="573b9a55-f36a-4068-8998-e4a932fecf6d"
+            name="checkBox3_Click"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="085045f9-a545-4a3d-a0d0-5f849bee81f2"
+                  name="object sender"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="f3ef87b7-738f-4568-a34c-3fbbd3999aa6"
+                  name="RoutedEventArgs e)("
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="bd3ba9c6-10c4-43b4-9129-3eaea95a9f82"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="41a455e0-a1f5-4f5c-bc99-b0caaaed2d13"
+                      LastKnownName="void"
+                      LastKnownLocation="lab_2.uml" />
+                  </type_NamedElement>
+                </parameter>
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
@@ -5749,16 +4887,6 @@
     </packageHasNamedElement>
     <packageHasNamedElement>
       <executionEvent
-        Id="eca8db1d-9dea-40b7-aca1-7bc46226fc3b"
-        name="ExecutionEvent" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <executionEvent
-        Id="280f23ed-405f-4360-b716-5ff31e8e27fd"
-        name="ExecutionEvent" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <executionEvent
         Id="276617d6-6749-4a94-bb13-c7aebe816d18"
         name="ExecutionEvent" />
     </packageHasNamedElement>
@@ -5766,6 +4894,288 @@
       <executionEvent
         Id="218fa470-c6b8-485f-80f3-0263e22e3678"
         name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="51c16f5b-4a2a-49d1-af53-6b8e4d6aa4ca"
+        name="Выбор праздника"
+        isAbstract="false"
+        isLeaf="false">
+        <generalsInternal>
+          <generalization
+            Id="0483fffb-555c-4293-b4f3-6fc5731f788a"
+            isSubstitutable="false">
+            <useCaseMoniker
+              Id="220e4fa7-7777-4d37-b0e8-07a959ffbc6f"
+              LastKnownName="Ввод параметров "
+              LastKnownLocation="lab_2.uml" />
+          </generalization>
+        </generalsInternal>
+        <additions>
+          <include
+            Id="43c03588-8642-4f9d-a61c-6cfe19b5bb22">
+            <useCaseMoniker
+              Id="1bf479e7-2af0-43a8-bb29-2eb87b5dc7f5"
+              LastKnownName="Проверка корректности параметров"
+              LastKnownLocation="lab_2.uml" />
+          </include>
+        </additions>
+        <subjects>
+          <subsystemMoniker
+            Id="9005b0d9-bed7-4cc8-a6df-fc7c88128460"
+            LastKnownName="Системный модуль"
+            LastKnownLocation="lab_2.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="8b9d9e97-6ac0-4c87-a7dd-ec701c6a92c8"
+        name="Отправить поздравление"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="9005b0d9-bed7-4cc8-a6df-fc7c88128460"
+            LastKnownName="Системный модуль"
+            LastKnownLocation="lab_2.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="3be9f4cd-f0b0-491f-806e-f80e9684db39"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="8a09d21c-5fb7-4272-8e65-f53cfcb3e7a7"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="ed1133c3-2343-4395-8ec8-b95874d23988"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="c7ab8e28-6632-410e-a2e5-2f0b3561beae"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="5db11cf6-4dea-498c-ad5e-da4f5c802709"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="34fa0f17-1e28-4c53-8e7f-bd5d96e7a9a8"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="df07cc6e-5080-4cda-a5ab-53ba060d0981"
+        name="TotalWindow"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedOperationsInternal>
+          <operation
+            Id="2dac89e3-140b-472a-ba7c-1486b3a74baa"
+            name="TotalWindow"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="5e2b73b7-2a79-4e06-a0da-e656a627b5bd"
+            name="Button_Click"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="94e59b40-3aec-4675-b3a6-58bdec274cc4"
+                  name="object sender"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="86b92e64-69f5-49f8-949a-4f5603122456"
+                  name="RoutedEventArgs e)("
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="c7555f60-b792-48c7-b868-0b06f72765dd"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="41a455e0-a1f5-4f5c-bc99-b0caaaed2d13"
+                      LastKnownName="void"
+                      LastKnownLocation="lab_2.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="430155af-68da-43ed-8b25-80c0618ed327"
+            name="buttonVK_Click"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="4326c1f6-8846-4546-9753-060381c7aae8"
+                  name="object sender"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="817710db-647e-43a8-9fcb-9450845d818e"
+                  name="RoutedEventArgs e"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="346f16e9-9e4f-44e8-a5b5-56fe56fba867"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="41a455e0-a1f5-4f5c-bc99-b0caaaed2d13"
+                      LastKnownName="void"
+                      LastKnownLocation="lab_2.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="f89a4c40-3760-4953-9f1d-8416c0a6762a"
+            name="buttonOK_Click"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="9c275db3-9ade-4b54-965f-fdc584f04b08"
+                  name="object sender"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a7c54b72-badb-4c1b-b0b8-00be4bc43797"
+                  name="RoutedEventArgs e)("
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="041824be-564f-431a-9169-a9a100bdf7ea"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="41a455e0-a1f5-4f5c-bc99-b0caaaed2d13"
+                      LastKnownName="void"
+                      LastKnownLocation="lab_2.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="f4ad5ec8-d0c7-4f25-80f5-708c28dd6afe"
+            name="buttonFB_Click"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="fa9f17bb-66ca-48c4-bd81-244c9ff74edb"
+                  name="object sender"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="d89c8625-cca4-4344-a92c-168a7719485e"
+                  name="RoutedEventArgs e"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="0ea17939-bdec-4650-93d9-ccc4b6195b4d"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="41a455e0-a1f5-4f5c-bc99-b0caaaed2d13"
+                      LastKnownName="void"
+                      LastKnownLocation="lab_2.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="68e4e5b0-bbb7-425b-8de3-85e24c11091c"
+        name="int" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="35f3af47-a0a9-489a-b95f-f2862bc61b4d"
+        name="string" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="885a710d-5cc8-4997-9d5c-6f46e2fec807"
+        name="string[]" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="adadbc2a-dc59-47a0-a4e1-70123cb7b448"
+        name="System.Windows.Media.ImageSource" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="262104bd-aeaf-4227-9ad2-c17f831881d0"
+        name="ищщд" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="508cb0f6-6156-48f3-bb1f-78faf9105f66"
+        name="bool" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType
