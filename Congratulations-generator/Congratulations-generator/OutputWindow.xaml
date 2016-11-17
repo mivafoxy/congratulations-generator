@@ -32,27 +32,28 @@
             <RadioButton x:Name="radioButton2" Grid.Column="1" Grid.Row="0" Margin="20,20" Cursor="Hand" VerticalAlignment="Bottom" HorizontalAlignment="Left" />
             <Image Grid.Column="1" Grid.Row="0" Margin="40,70,20,20" Name="Image2"/>
             <RadioButton x:Name="radioButton3" Grid.Column="0" Grid.Row="1" Margin="20,20" Cursor="Hand" VerticalAlignment="Bottom" HorizontalAlignment="Left"/>
+            <Label Grid.Column="0" Grid.Row="1">Добавить картинку</Label>
             <Image Grid.Column="0" Grid.Row="1" Margin="40,70,20,20" Name="Image3"/>
             <RadioButton x:Name="radioButton4" Grid.Column="1" Grid.Row="1" Margin="20,20" Cursor="Hand" VerticalAlignment="Bottom" HorizontalAlignment="Left"/>
             <Image Grid.Column="1" Grid.Row="1" Margin="40,70,20,20" Name="Image4"/>
+            <CheckBox Name="checkBox3" HorizontalAlignment="Left" Margin="-20,7,0,0" Grid.Row="1" VerticalAlignment="Top" />
         </Grid>
         <Label x:Name="labelTitel" Grid.Row="0" Grid.Column="0" FontFamily="Segoe UI Semibold" FontSize="20" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,20,0,0" Content="Выбор текста поздравления"/>
         <CheckBox x:Name="checkBox1" Grid.Row="0" Grid.Column="0" Margin="20,250,556,286"></CheckBox>
-        <RichTextBox x:Name="richTextBox1" Grid.Row="0" Grid.Column="0" Width="450" FontFamily="Segoe UI Semilight" FontSize="20" Margin="60,60,60,282" BorderBrush="#FF72C1F7" Background="#FFCCEEEE" ScrollViewer.CanContentScroll="True" VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Auto" Height="200"/>
-        <Button x:Name="refreshButton1" Grid.Column="0" Grid.Row="0" Width="50" Height="50" RenderTransformOrigin="5.76,-0.28" Margin="536,132,10,356" BorderBrush="#00707070"  >
+        <RichTextBox x:Name="richTextBox1" Grid.Row="0" Grid.Column="0" Width="450" FontFamily="Segoe UI Semilight" FontSize="20" Margin="63,62,83,288" BorderBrush="#FF72C1F7" Background="#FFCCEEEE" ScrollViewer.CanContentScroll="True" VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Auto" Height="200"/>
+        <Button x:Name="refreshButton1" Grid.Column="0" Grid.Row="0" Width="50" Height="50" RenderTransformOrigin="5.76,-0.28" Margin="515,134,31,366" BorderBrush="#00707070" ClickMode="Press" >
             <Button.Background>
-                <ImageBrush Stretch="Uniform" ImageSource="Images/old-view-refresh.png"/>
+                <ImageBrush Stretch="Uniform" ImageSource="Images/ok.png"/>
             </Button.Background>
         </Button>
         <CheckBox x:Name="checkBox2" Grid.Row="0" Grid.Column="0" Margin="20,519,556,15"></CheckBox>
-        <RichTextBox x:Name="richTextBox2" Grid.Row="0" Grid.Column="0" Width="450" Height="200" FontFamily="Segoe UI Semilight" FontSize="20" Margin="60,330,60,282" BorderBrush="#FF72C1F7" Background="#FFCCEEEE" ScrollViewer.CanContentScroll="True" VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Auto"  MinHeight="200" MaxHeight="200" Panel.ZIndex="10"/>
-        <Button x:Name="refreshButton2" Grid.Column="0" Grid.Row="0" Width="50" Height="50" RenderTransformOrigin="5.76,-0.28" Margin="536,409,10,91" BorderBrush="#00707070"  >
+        <RichTextBox x:Name="richTextBox2" Grid.Row="0" Grid.Column="0" Width="450" Height="200" FontFamily="Segoe UI Semilight" FontSize="20" Margin="63,335,83,15" BorderBrush="#FF72C1F7" Background="#FFCCEEEE" ScrollViewer.CanContentScroll="True" VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Auto"  MinHeight="200" MaxHeight="200" Panel.ZIndex="10"/>
+        <Button x:Name="refreshButton2" Grid.Column="0" Grid.Row="0" Width="50" Height="50" RenderTransformOrigin="5.76,-0.28" Margin="515,411,31,89" BorderBrush="#00707070"  >
             <Button.Background>
-                <ImageBrush Stretch="Uniform" ImageSource="Images/old-view-refresh.png"/>
+                <ImageBrush Stretch="Uniform" ImageSource="Images/ok.png"/>
             </Button.Background>
         </Button>
-        <Button x:Name="buttonCreateNew" Grid.Column="0" Grid.Row="1" Margin="270,22,27,21" FontSize="20" FontFamily="Segoe UI Semibold" Cursor="Hand" BorderBrush="#FF2693AA" RenderTransformOrigin="0.5,0.5" ForceCursor="True" Background="#FF4AC2DB" Height="76" MaxWidth="290" MaxHeight="68" HorizontalAlignment="Center" VerticalAlignment="Center" Width="299">Сгенерировать новое</Button>
-        <Button x:Name="buttonPast" Grid.Column="0" Grid.Row="1" Margin="40,22,350,21" FontSize="20" FontFamily="Segoe UI Semibold" Cursor="Hand" BorderBrush="#FF2693AA" RenderTransformOrigin="0.5,0.5" ForceCursor="True" Background="#FF4AC2DB" Height="77" MaxWidth="290" MaxHeight="68" Width="200" HorizontalAlignment="Center" VerticalAlignment="Center" >Вернуться к анкете</Button>
+        <Button x:Name="buttonPast" Grid.Column="0" Grid.Row="1" Margin="40,22,350,21" FontSize="20" FontFamily="Segoe UI Semibold" Cursor="Hand" BorderBrush="#FF2693AA" RenderTransformOrigin="0.5,0.5" ForceCursor="True" Background="#FF4AC2DB" Height="77" MaxWidth="290" MaxHeight="68" Width="200" HorizontalAlignment="Center" VerticalAlignment="Center" Click="buttonPast_Click">Вернуться к анкете</Button>
         <Label x:Name="labelPicture" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,20,0,0" FontFamily="Segoe UI Semibold" FontSize="20">Выбор картинки</Label>
         <Grid  Grid.Row="1" Grid.Column="1" Height="100">
             <Grid.ColumnDefinitions>
@@ -60,7 +61,12 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <Button Grid.Column="0" FontSize="20" FontFamily="Segoe UI Semibold" Cursor="Hand" BorderBrush="#FF10661C" RenderTransformOrigin="0.5,0.5" ForceCursor="True" Background="#FF1B972C" Height="68" MaxWidth="290" MaxHeight="68" Width="290" HorizontalAlignment="Center" VerticalAlignment="Center" >Принять</Button>
-            <Button Grid.Column="1" FontSize="20" FontFamily="Segoe UI Semibold" Cursor="Hand" BorderBrush="#FFFA0000" RenderTransformOrigin="0.5,0.5" ForceCursor="True" Background="#7FFF0000" Height="68" MaxWidth="220" MaxHeight="68" Width="220" HorizontalAlignment="Center" VerticalAlignment="Center">Выход</Button>
+            <Button Grid.Column="1" FontSize="20" FontFamily="Segoe UI Semibold" Cursor="Hand" BorderBrush="#FFFA0000" RenderTransformOrigin="0.5,0.5" ForceCursor="True" Background="#7FFF0000" Height="68" MaxWidth="220" MaxHeight="68" Width="220" HorizontalAlignment="Center" VerticalAlignment="Center" >Выход</Button>
         </Grid>
+        <Button x:Name="refreshButton3" Grid.Column="1" Grid.Row="0" Width="50" Height="50" RenderTransformOrigin="5.76,-0.28" Margin="273,272,273,228" BorderBrush="#00707070">
+            <Button.Background>
+                <ImageBrush Stretch="Uniform" ImageSource="Images/ok.png"/>
+            </Button.Background>
+        </Button>
     </Grid>
 </Window>

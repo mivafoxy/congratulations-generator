@@ -43,7 +43,7 @@
                     <ImageBrush ImageSource="Images/vk.png" Stretch="Uniform"/>
                 </Button.Background>
             </Button>
-            <Button Grid.Row="3" Margin="17,117,25,12" Height="160" MinWidth="75" MinHeight="160" MaxWidth="75" MaxHeight="160" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="Button_Click" Content="Н&#xD;&#xA;а&#xD;&#xA;з&#xD;&#xA;а&#xD;&#xA;д" FontFamily="Yu Gothic UI Semibold" FontWeight="Bold" VerticalAlignment="Center" Cursor="Hand" Background="#FF4AC2DB" BorderBrush="#FF2693AA" Grid.RowSpan="2" Width="75" />
+            <Button Grid.Row="3" Margin="17,117,25,12" Height="160" MinWidth="75" MinHeight="160" MaxWidth="75" MaxHeight="160" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"  Content="Н&#xD;&#xA;а&#xD;&#xA;з&#xD;&#xA;а&#xD;&#xA;д" FontFamily="Yu Gothic UI Semibold" FontWeight="Bold" VerticalAlignment="Center" Cursor="Hand" Background="#FF4AC2DB" BorderBrush="#FF2693AA" Grid.RowSpan="2" Width="75" />
         </Grid>
     </Grid>
 </Window>

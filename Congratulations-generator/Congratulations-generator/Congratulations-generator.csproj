@@ -118,10 +118,6 @@
     <Resource Include="Images\pepe1.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\pepe4.jpg" />
-    <Resource Include="Images\pepe3.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Images\pepe2.png" />
   </ItemGroup>
   <ItemGroup>

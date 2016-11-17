@@ -47,9 +47,6 @@ namespace Congratulations_generator
             //место для функции корректировки данных
             //место для функции генирации стартового поздравления и картинок
             //не забыть закрыть первую форму при корректном заполнении
-            outputWindow.richTextBox.AppendText("Hello,World!\n");
-            outputWindow.richTextBox.AppendText("Hello,Life!\n\n\n\n\n\n\n\n\n\n");
-            outputWindow.richTextBox.AppendText("Hello,Friends!\n");
             outputWindow.Show();
         }
     }
