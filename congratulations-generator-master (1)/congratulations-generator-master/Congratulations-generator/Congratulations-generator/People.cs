@@ -9,10 +9,10 @@ namespace Congratulations_generator
 {
     class People
     {
-      public  static People dataObj;
+       public  static People dataObj;
        private string name;
        private string salute;
-       private int age;
+       private string age;
        private string sex;
        private string interests;
        private string holiday;
@@ -27,7 +27,7 @@ namespace Congratulations_generator
            return salute;
        }
 
-       public int getAge()
+       public string getAge()
        {
            return age;
        }
@@ -46,7 +46,7 @@ namespace Congratulations_generator
        {
            return holiday;
        }
-        public People(string kName,string kSalute, int kAge,string kSex, string kInterests, string kHoliday )
+        public People(string kName,string kSalute, string kAge,string kSex, string kInterests, string kHoliday )
        {
            name = kName;
            salute = kSalute;

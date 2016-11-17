@@ -5,26 +5,16 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="humanBaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <EntityType Name="Birthday_Cliche">
+        <EntityType Name="Cliche">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" Nullable="false" />
-          <Property Name="Name" Type="nvarchar(max)" />
-        </EntityType>
-        <EntityType Name="Birthday_Picture">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="int" Nullable="false" />
-          <Property Name="Name" Type="nvarchar" MaxLength="50" />
-        </EntityType>
-        <EntityType Name="Birthday_Poem">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="int" Nullable="false" />
-          <Property Name="Name" Type="nvarchar(max)" />
+          <Property Name="Content" Type="nvarchar(max)" />
+          <Property Name="Holiday" Type="nvarchar" MaxLength="50" />
+          <Property Name="Interests" Type="nvarchar(max)" />
+          <Property Name="Sex" Type="nchar" MaxLength="10" />
+          <Property Name="Age" Type="nchar" MaxLength="10" />
         </EntityType>
         <EntityType Name="Holiday">
           <Key>
@@ -40,7 +30,7 @@
           <Property Name="Id" Type="int" Nullable="false" />
           <Property Name="Name" Type="nvarchar" MaxLength="50" />
           <Property Name="Solute" Type="nvarchar" MaxLength="50" />
-          <Property Name="Age" Type="int" />
+          <Property Name="Age" Type="nchar" MaxLength="10" />
           <Property Name="Sex" Type="nvarchar" MaxLength="50" />
           <Property Name="Interests" Type="nvarchar" MaxLength="50" />
           <Property Name="Holiday" Type="nvarchar" MaxLength="50" />
@@ -52,54 +42,40 @@
           <Property Name="Id" Type="int" Nullable="false" />
           <Property Name="Name" Type="nvarchar" MaxLength="50" />
         </EntityType>
-        <EntityType Name="New_Year_Cliche">
+        <EntityType Name="Pictures">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" Nullable="false" />
-          <Property Name="Name" Type="nvarchar(max)" />
+          <Property Name="Content" Type="nvarchar(max)" />
+          <Property Name="Holiday" Type="nvarchar" MaxLength="50" />
+          <Property Name="Interests" Type="nvarchar(max)" />
+          <Property Name="Sex" Type="nchar" MaxLength="10" />
+          <Property Name="Age" Type="nchar" MaxLength="10" />
         </EntityType>
-        <EntityType Name="New_Year_Picture">
+        <EntityType Name="Poems">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" Nullable="false" />
-          <Property Name="Picture" Type="nvarchar" MaxLength="50" />
-        </EntityType>
-        <EntityType Name="New_Year_Poem">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="int" Nullable="false" />
-          <Property Name="Name" Type="nvarchar(max)" />
+          <Property Name="Content" Type="nvarchar(max)" />
+          <Property Name="Holiday" Type="nvarchar" MaxLength="50" />
+          <Property Name="Interests" Type="nvarchar(max)" />
+          <Property Name="Sex" Type="nchar" MaxLength="10" />
+          <Property Name="Age" Type="nchar" MaxLength="10" />
         </EntityType>
         <EntityContainer Name="humanBaseModelStoreContainer">
-          <EntitySet Name="Birthday_Cliche" EntityType="Self.Birthday_Cliche" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Birthday_Picture" EntityType="Self.Birthday_Picture" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Birthday_Poem" EntityType="Self.Birthday_Poem" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Cliche" EntityType="Self.Cliche" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Holiday" EntityType="Self.Holiday" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Human" EntityType="Self.Human" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Interests" EntityType="Self.Interests" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="New_Year_Cliche" EntityType="Self.New_Year_Cliche" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="New_Year_Picture" EntityType="Self.New_Year_Picture" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="New_Year_Poem" EntityType="Self.New_Year_Poem" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Pictures" EntityType="Self.Pictures" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Poems" EntityType="Self.Poems" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="humanBaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityType Name="Human">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" />
-          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Solute" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Age" Type="Int32" />
-          <Property Name="Sex" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Interests" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Holiday" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-        </EntityType>
         <EntityType Name="Interests">
           <Key>
             <PropertyRef Name="Id" />
@@ -108,15 +84,12 @@
           <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityContainer Name="humanBaseEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="Human" EntityType="Self.Human" />
           <EntitySet Name="Interests" EntityType="Self.Interests" />
           <EntitySet Name="Holiday" EntityType="humanBaseModel.Holiday" />
-          <EntitySet Name="Birthday_Cliche" EntityType="humanBaseModel.Birthday_Cliche" />
-          <EntitySet Name="Birthday_Picture" EntityType="humanBaseModel.Birthday_Picture" />
-          <EntitySet Name="Birthday_Poem" EntityType="humanBaseModel.Birthday_Poem" />
-          <EntitySet Name="New_Year_Cliche" EntityType="humanBaseModel.New_Year_Cliche" />
-          <EntitySet Name="New_Year_Picture" EntityType="humanBaseModel.New_Year_Picture" />
-          <EntitySet Name="New_Year_Poem" EntityType="humanBaseModel.New_Year_Poem" />
+          <EntitySet Name="Cliche" EntityType="humanBaseModel.Cliche" />
+          <EntitySet Name="Pictures" EntityType="humanBaseModel.Pictures" />
+          <EntitySet Name="Poems" EntityType="humanBaseModel.Poems" />
+          <EntitySet Name="Human" EntityType="humanBaseModel.Human" />
         </EntityContainer>
         <EntityType Name="Holiday">
           <Key>
@@ -125,47 +98,50 @@
           <Property Name="Id" Type="Int32" Nullable="false" />
           <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
-        <EntityType Name="Birthday_Cliche">
+        <EntityType Name="Cliche">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" />
-          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Holiday" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Interests" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Sex" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="Age" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
         </EntityType>
-        <EntityType Name="Birthday_Picture">
+        <EntityType Name="Pictures">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Holiday" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Interests" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Sex" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="Age" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Poems">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Holiday" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Interests" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Sex" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="Age" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Human">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" />
           <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-        </EntityType>
-        <EntityType Name="Birthday_Poem">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" />
-          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-        </EntityType>
-        <EntityType Name="New_Year_Cliche">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" />
-          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-        </EntityType>
-        <EntityType Name="New_Year_Picture">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" />
-          <Property Name="Picture" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-        </EntityType>
-        <EntityType Name="New_Year_Poem">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" />
-          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Solute" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Age" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="Sex" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Interests" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Holiday" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -173,19 +149,6 @@
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="humanBaseModelStoreContainer" CdmEntityContainer="humanBaseEntities">
-          <EntitySetMapping Name="Human">
-            <EntityTypeMapping TypeName="humanBaseModel.Human">
-              <MappingFragment StoreEntitySet="Human">
-                <ScalarProperty Name="Holiday" ColumnName="Holiday" />
-                <ScalarProperty Name="Interests" ColumnName="Interests" />
-                <ScalarProperty Name="Sex" ColumnName="Sex" />
-                <ScalarProperty Name="Age" ColumnName="Age" />
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="Solute" ColumnName="Solute" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="Interests">
             <EntityTypeMapping TypeName="humanBaseModel.Interests">
               <MappingFragment StoreEntitySet="Interests">
@@ -202,49 +165,50 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Birthday_Cliche">
-            <EntityTypeMapping TypeName="humanBaseModel.Birthday_Cliche">
-              <MappingFragment StoreEntitySet="Birthday_Cliche">
-                <ScalarProperty Name="Name" ColumnName="Name" />
+          <EntitySetMapping Name="Cliche">
+            <EntityTypeMapping TypeName="humanBaseModel.Cliche">
+              <MappingFragment StoreEntitySet="Cliche">
+                <ScalarProperty Name="Age" ColumnName="Age" />
+                <ScalarProperty Name="Sex" ColumnName="Sex" />
+                <ScalarProperty Name="Interests" ColumnName="Interests" />
+                <ScalarProperty Name="Holiday" ColumnName="Holiday" />
+                <ScalarProperty Name="Content" ColumnName="Content" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Birthday_Picture">
-            <EntityTypeMapping TypeName="humanBaseModel.Birthday_Picture">
-              <MappingFragment StoreEntitySet="Birthday_Picture">
-                <ScalarProperty Name="Name" ColumnName="Name" />
+          <EntitySetMapping Name="Pictures">
+            <EntityTypeMapping TypeName="humanBaseModel.Pictures">
+              <MappingFragment StoreEntitySet="Pictures">
+                <ScalarProperty Name="Age" ColumnName="Age" />
+                <ScalarProperty Name="Sex" ColumnName="Sex" />
+                <ScalarProperty Name="Interests" ColumnName="Interests" />
+                <ScalarProperty Name="Holiday" ColumnName="Holiday" />
+                <ScalarProperty Name="Content" ColumnName="Content" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Birthday_Poem">
-            <EntityTypeMapping TypeName="humanBaseModel.Birthday_Poem">
-              <MappingFragment StoreEntitySet="Birthday_Poem">
-                <ScalarProperty Name="Name" ColumnName="Name" />
+          <EntitySetMapping Name="Poems">
+            <EntityTypeMapping TypeName="humanBaseModel.Poems">
+              <MappingFragment StoreEntitySet="Poems">
+                <ScalarProperty Name="Age" ColumnName="Age" />
+                <ScalarProperty Name="Sex" ColumnName="Sex" />
+                <ScalarProperty Name="Interests" ColumnName="Interests" />
+                <ScalarProperty Name="Holiday" ColumnName="Holiday" />
+                <ScalarProperty Name="Content" ColumnName="Content" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="New_Year_Cliche">
-            <EntityTypeMapping TypeName="humanBaseModel.New_Year_Cliche">
-              <MappingFragment StoreEntitySet="New_Year_Cliche">
-                <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="Id" ColumnName="Id" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="New_Year_Picture">
-            <EntityTypeMapping TypeName="humanBaseModel.New_Year_Picture">
-              <MappingFragment StoreEntitySet="New_Year_Picture">
-                <ScalarProperty Name="Picture" ColumnName="Picture" />
-                <ScalarProperty Name="Id" ColumnName="Id" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="New_Year_Poem">
-            <EntityTypeMapping TypeName="humanBaseModel.New_Year_Poem">
-              <MappingFragment StoreEntitySet="New_Year_Poem">
+          <EntitySetMapping Name="Human">
+            <EntityTypeMapping TypeName="humanBaseModel.Human">
+              <MappingFragment StoreEntitySet="Human">
+                <ScalarProperty Name="Holiday" ColumnName="Holiday" />
+                <ScalarProperty Name="Interests" ColumnName="Interests" />
+                <ScalarProperty Name="Sex" ColumnName="Sex" />
+                <ScalarProperty Name="Age" ColumnName="Age" />
+                <ScalarProperty Name="Solute" ColumnName="Solute" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>

@@ -12,14 +12,13 @@ namespace Congratulations_generator
     using System;
     using System.Collections.Generic;
     
-    public partial class Human
+    public partial class Poems
     {
         public int Id { get; set; }
-        public string Name { get; set; }
-        public string Solute { get; set; }
-        public string Age { get; set; }
-        public string Sex { get; set; }
-        public string Interests { get; set; }
+        public string Content { get; set; }
         public string Holiday { get; set; }
+        public string Interests { get; set; }
+        public string Sex { get; set; }
+        public string Age { get; set; }
     }
 }

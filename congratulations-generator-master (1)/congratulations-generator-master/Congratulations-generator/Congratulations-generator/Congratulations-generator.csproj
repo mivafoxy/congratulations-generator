@@ -63,6 +63,20 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Cliche.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Congratulations.cs" />
+    <Compile Include="Pictures.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Poems.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TableChanger.cs" />
+    <Compile Include="TotalWindow.xaml.cs">
+      <DependentUpon>TotalWindow.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -70,15 +84,6 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Birthday_Cliche.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Birthday_Picture.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Birthday_Poem.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Holiday.cs">
       <DependentUpon>Model1.tt</DependentUpon>
@@ -94,6 +99,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="OutputWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TotalWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -113,15 +122,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="New_Year_Cliche.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="New_Year_Picture.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="New_Year_Poem.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="OutputWindow.xaml.cs">
       <DependentUpon>OutputWindow.xaml</DependentUpon>
@@ -199,20 +199,250 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="BD_Images\НовыйГод\1.jpg" />
+    <Resource Include="BD_Images\НовыйГод\2.jpg" />
+    <Resource Include="BD_Images\НовыйГод\3.jpg" />
+    <Resource Include="BD_Images\НовыйГод\4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\old-view-refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="BD_Images\НовыйГод\5.jpg" />
+    <Resource Include="BD_Images\НовыйГод\6.jpg" />
+    <Resource Include="BD_Images\НовыйГод\7.jpg" />
+    <Resource Include="BD_Images\НовыйГод\8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="BD_Images\Theme\1.jpg" />
+    <Resource Include="BD_Images\Theme\2.jpg" />
+    <Resource Include="BD_Images\Theme\3.jpg" />
+    <Resource Include="BD_Images\Theme\4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="BD_Images\Theme\5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\NoPhoto.jpg" />
+  </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Resource Include="BD_Images\Birthday\4.jpg" />
+    <Resource Include="BD_Images\1мая\1.jpg" />
+    <Resource Include="BD_Images\1мая\2.jpg" />
+    <Resource Include="BD_Images\1мая\3.jpg" />
+    <Resource Include="BD_Images\1мая\4.jpg" />
+    <Resource Include="BD_Images\1мая\5.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="BD_Images\Birthday\1.jpg" />
-    <Resource Include="BD_Images\Birthday\2.jpg" />
-    <Resource Include="BD_Images\Birthday\3.jpg" />
+    <Resource Include="BD_Images\1сентября\1.jpg" />
+    <Resource Include="BD_Images\1сентября\10.jpg" />
+    <Resource Include="BD_Images\1сентября\2.jpg" />
+    <Resource Include="BD_Images\1сентября\3.jpg" />
+    <Resource Include="BD_Images\1сентября\4.jpg" />
+    <Resource Include="BD_Images\1сентября\5.jpg" />
+    <Resource Include="BD_Images\1сентября\6.jpg" />
+    <Resource Include="BD_Images\1сентября\7.jpg" />
+    <Resource Include="BD_Images\1сентября\8.jpg" />
+    <Resource Include="BD_Images\1сентября\9.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="BD_Images\New_Year\1.jpg" />
-    <Resource Include="BD_Images\New_Year\2.jpg" />
-    <Resource Include="BD_Images\New_Year\3.jpg" />
-    <Resource Include="BD_Images\New_Year\4.jpg" />
+    <Resource Include="BD_Images\23февраля\1.jpg" />
+    <Resource Include="BD_Images\23февраля\10.jpg" />
+    <Resource Include="BD_Images\23февраля\11.jpg" />
+    <Resource Include="BD_Images\23февраля\2.jpg" />
+    <Resource Include="BD_Images\23февраля\3.jpg" />
+    <Resource Include="BD_Images\23февраля\4.jpg" />
+    <Resource Include="BD_Images\23февраля\5.jpg" />
+    <Resource Include="BD_Images\23февраля\6.jpg" />
+    <Resource Include="BD_Images\23февраля\7.jpg" />
+    <Resource Include="BD_Images\23февраля\8.jpg" />
+    <Resource Include="BD_Images\23февраля\9.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="BD_Images\4ноября\1.jpg" />
+    <Resource Include="BD_Images\4ноября\2.jpg" />
+    <Resource Include="BD_Images\4ноября\3.jpg" />
+    <Resource Include="BD_Images\4ноября\4.jpg" />
+    <Resource Include="BD_Images\4ноября\5.jpg" />
+    <Resource Include="BD_Images\4ноября\6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="BD_Images\8июля\1.jpg" />
+    <Resource Include="BD_Images\8июля\2.jpg" />
+    <Resource Include="BD_Images\8июля\3.jpg" />
+    <Resource Include="BD_Images\8июля\4.jpg" />
+    <Resource Include="BD_Images\8июля\5.jpg" />
+    <Resource Include="BD_Images\8июля\6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="BD_Images\8марта\1.jpg" />
+    <Resource Include="BD_Images\8марта\10.jpg" />
+    <Resource Include="BD_Images\8марта\2.jpg" />
+    <Resource Include="BD_Images\8марта\3.jpg" />
+    <Resource Include="BD_Images\8марта\4.jpg" />
+    <Resource Include="BD_Images\8марта\5.jpg" />
+    <Resource Include="BD_Images\8марта\6.jpg" />
+    <Resource Include="BD_Images\8марта\7.jpg" />
+    <Resource Include="BD_Images\8марта\8.jpg" />
+    <Resource Include="BD_Images\8марта\9.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="BD_Images\9мая\1.jpg" />
+    <Resource Include="BD_Images\9мая\10.jpg" />
+    <Resource Include="BD_Images\9мая\11.jpg" />
+    <Resource Include="BD_Images\9мая\2.jpg" />
+    <Resource Include="BD_Images\9мая\3.jpg" />
+    <Resource Include="BD_Images\9мая\4.jpg" />
+    <Resource Include="BD_Images\9мая\5.jpg" />
+    <Resource Include="BD_Images\9мая\6.jpg" />
+    <Resource Include="BD_Images\9мая\7.jpg" />
+    <Resource Include="BD_Images\9мая\8.jpg" />
+    <Resource Include="BD_Images\9мая\9.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="BD_Images\14февраля\Женщина\1.jpg" />
+    <Resource Include="BD_Images\14февраля\Женщина\2.jpg" />
+    <Resource Include="BD_Images\14февраля\Женщина\3.jpg" />
+    <Resource Include="BD_Images\14февраля\Женщина\4.jpg" />
+    <Resource Include="BD_Images\14февраля\Женщина\5.jpg" />
+    <Resource Include="BD_Images\14февраля\Женщина\6.jpg" />
+    <Resource Include="BD_Images\14февраля\Женщина\7.jpg" />
+    <Resource Include="BD_Images\14февраля\Женщина\8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="BD_Images\14февраля\Мужчина\1.jpg" />
+    <Resource Include="BD_Images\14февраля\Мужчина\2.jpg" />
+    <Resource Include="BD_Images\14февраля\Мужчина\3.jpg" />
+    <Resource Include="BD_Images\14февраля\Мужчина\4.jpg" />
+    <Resource Include="BD_Images\14февраля\Мужчина\5.jpg" />
+    <Resource Include="BD_Images\14февраля\Мужчина\6.jpg" />
+    <Resource Include="BD_Images\14февраля\Мужчина\7.jpg" />
+    <Resource Include="BD_Images\14февраля\Мужчина\8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="BD_Images\ДеньРождение\3-12\1.jpg" />
+    <Resource Include="BD_Images\ДеньРождение\3-12\10.jpg" />
+    <Resource Include="BD_Images\ДеньРождение\3-12\2.jpg" />
+    <Resource Include="BD_Images\ДеньРождение\3-12\3.jpg" />
+    <Resource Include="BD_Images\ДеньРождение\3-12\4.jpg" />
+    <Resource Include="BD_Images\ДеньРождение\3-12\5.jpg" />
+    <Resource Include="BD_Images\ДеньРождение\3-12\6.jpg" />
+    <Resource Include="BD_Images\ДеньРождение\3-12\7.jpg" />
+    <Resource Include="BD_Images\ДеньРождение\3-12\8.jpg" />
+    <Resource Include="BD_Images\ДеньРождение\3-12\9.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="BD_Images\ДеньРождение\12-16\Девочка\1.jpg" />
+    <Resource Include="BD_Images\ДеньРождение\12-16\Девочка\2.jpg" />
+    <Resource Include="BD_Images\ДеньРождение\12-16\Девочка\3.jpg" />
+    <Resource Include="BD_Images\ДеньРождение\12-16\Девочка\4.jpg" />
+    <Resource Include="BD_Images\ДеньРождение\12-16\Девочка\5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="BD_Images\ДеньРождение\12-16\Мальчик\1.jpg" />
+    <Resource Include="BD_Images\ДеньРождение\12-16\Мальчик\2.jpg" />
+    <Resource Include="BD_Images\ДеньРождение\12-16\Мальчик\3.jpg" />
+    <Resource Include="BD_Images\ДеньРождение\12-16\Мальчик\4.jpg" />
+    <Resource Include="BD_Images\ДеньРождение\12-16\Мальчик\5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="BD_Images\ДеньРождение\12-16\1.jpg" />
+    <Resource Include="BD_Images\ДеньРождение\12-16\2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="BD_Images\ДеньРождение\16-24\Девушка\1.jpg" />
+    <Resource Include="BD_Images\ДеньРождение\16-24\Девушка\2.jpg" />
+    <Resource Include="BD_Images\ДеньРождение\16-24\Девушка\3.jpg" />
+    <Resource Include="BD_Images\ДеньРождение\16-24\Девушка\4.jpg" />
+    <Resource Include="BD_Images\ДеньРождение\16-24\Девушка\5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="BD_Images\ДеньРождение\16-24\Юноша\1.jpg" />
+    <Resource Include="BD_Images\ДеньРождение\16-24\Юноша\2.jpg" />
+    <Resource Include="BD_Images\ДеньРождение\16-24\Юноша\3.jpg" />
+    <Resource Include="BD_Images\ДеньРождение\16-24\Юноша\4.jpg" />
+    <Resource Include="BD_Images\ДеньРождение\16-24\Юноша\5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="BD_Images\ДеньРождение\25-54\Женщина\1.jpg" />
+    <Resource Include="BD_Images\ДеньРождение\25-54\Женщина\2.jpg" />
+    <Resource Include="BD_Images\ДеньРождение\25-54\Женщина\3.jpg" />
+    <Resource Include="BD_Images\ДеньРождение\25-54\Женщина\4.jpg" />
+    <Resource Include="BD_Images\ДеньРождение\25-54\Женщина\5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="BD_Images\ДеньРождение\25-54\Мужчина\1.jpg" />
+    <Resource Include="BD_Images\ДеньРождение\25-54\Мужчина\2.jpg" />
+    <Resource Include="BD_Images\ДеньРождение\25-54\Мужчина\3.jpg" />
+    <Resource Include="BD_Images\ДеньРождение\25-54\Мужчина\4.jpg" />
+    <Resource Include="BD_Images\ДеньРождение\25-54\Мужчина\5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="BD_Images\ДеньРождение\55+\Женщина\1.jpg" />
+    <Resource Include="BD_Images\ДеньРождение\55+\Женщина\2.jpg" />
+    <Resource Include="BD_Images\ДеньРождение\55+\Женщина\3.jpg" />
+    <Resource Include="BD_Images\ДеньРождение\55+\Женщина\4.jpg" />
+    <Resource Include="BD_Images\ДеньРождение\55+\Женщина\5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="BD_Images\ДеньРождение\55+\Мужчина\1.jpg" />
+    <Resource Include="BD_Images\ДеньРождение\55+\Мужчина\2.jpg" />
+    <Resource Include="BD_Images\ДеньРождение\55+\Мужчина\3.jpg" />
+    <Resource Include="BD_Images\ДеньРождение\55+\Мужчина\4.jpg" />
+    <Resource Include="BD_Images\ДеньРождение\55+\Мужчина\5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="BD_Images\ДеньУчителя\1.jpg" />
+    <Resource Include="BD_Images\ДеньУчителя\10.jpg" />
+    <Resource Include="BD_Images\ДеньУчителя\2.jpg" />
+    <Resource Include="BD_Images\ДеньУчителя\3.jpg" />
+    <Resource Include="BD_Images\ДеньУчителя\4.jpg" />
+    <Resource Include="BD_Images\ДеньУчителя\5.jpg" />
+    <Resource Include="BD_Images\ДеньУчителя\6.jpg" />
+    <Resource Include="BD_Images\ДеньУчителя\7.jpg" />
+    <Resource Include="BD_Images\ДеньУчителя\8.jpg" />
+    <Resource Include="BD_Images\ДеньУчителя\9.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="BD_Images\Крещение\1.jpg" />
+    <Resource Include="BD_Images\Крещение\2.jpg" />
+    <Resource Include="BD_Images\Крещение\3.jpg" />
+    <Resource Include="BD_Images\Крещение\4.jpg" />
+    <Resource Include="BD_Images\Крещение\5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="BD_Images\Рождество\1.jpg" />
+    <Resource Include="BD_Images\Рождество\10.jpg" />
+    <Resource Include="BD_Images\Рождество\11.jpg" />
+    <Resource Include="BD_Images\Рождество\12.jpg" />
+    <Resource Include="BD_Images\Рождество\13.jpg" />
+    <Resource Include="BD_Images\Рождество\14.jpg" />
+    <Resource Include="BD_Images\Рождество\15.jpg" />
+    <Resource Include="BD_Images\Рождество\2.jpg" />
+    <Resource Include="BD_Images\Рождество\3.jpg" />
+    <Resource Include="BD_Images\Рождество\4.jpg" />
+    <Resource Include="BD_Images\Рождество\5.jpg" />
+    <Resource Include="BD_Images\Рождество\6.jpg" />
+    <Resource Include="BD_Images\Рождество\7.jpg" />
+    <Resource Include="BD_Images\Рождество\8.jpg" />
+    <Resource Include="BD_Images\Рождество\9.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="BD_Images\Свадьба\1.jpg" />
+    <Resource Include="BD_Images\Свадьба\10.jpg" />
+    <Resource Include="BD_Images\Свадьба\11.jpg" />
+    <Resource Include="BD_Images\Свадьба\2.jpg" />
+    <Resource Include="BD_Images\Свадьба\3.jpg" />
+    <Resource Include="BD_Images\Свадьба\4.jpg" />
+    <Resource Include="BD_Images\Свадьба\5.jpg" />
+    <Resource Include="BD_Images\Свадьба\6.jpg" />
+    <Resource Include="BD_Images\Свадьба\7.jpg" />
+    <Resource Include="BD_Images\Свадьба\8.JPG" />
+    <Resource Include="BD_Images\Свадьба\9.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -5,15 +5,12 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="e1d1842f13514e10a7115b018df73678" Name="Diagram1">
-        <EntityTypeShape EntityType="humanBaseModel.Human" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="humanBaseModel.Interests" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="humanBaseModel.Holiday" Width="1.5" PointX="4.75" PointY="1" />
-        <EntityTypeShape EntityType="humanBaseModel.Birthday_Cliche" Width="1.5" PointX="3.75" PointY="3.75" />
-        <EntityTypeShape EntityType="humanBaseModel.Birthday_Picture" Width="1.5" PointX="0.75" PointY="4.75" />
-        <EntityTypeShape EntityType="humanBaseModel.Birthday_Poem" Width="1.5" PointX="5.75" PointY="3.75" />
-        <EntityTypeShape EntityType="humanBaseModel.New_Year_Cliche" Width="1.5" PointX="2.875" PointY="5.5" />
-        <EntityTypeShape EntityType="humanBaseModel.New_Year_Picture" Width="1.5" PointX="4.625" PointY="5.625" />
-        <EntityTypeShape EntityType="humanBaseModel.New_Year_Poem" Width="1.5" PointX="6.625" PointY="5.5" />
+        <EntityTypeShape EntityType="humanBaseModel.Interests" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="humanBaseModel.Holiday" Width="1.5" PointX="2.625" PointY="0.875" />
+        <EntityTypeShape EntityType="humanBaseModel.Cliche" Width="1.5" PointX="6.875" PointY="2.25" />
+        <EntityTypeShape EntityType="humanBaseModel.Pictures" Width="1.5" PointX="0.875" PointY="2.5" />
+        <EntityTypeShape EntityType="humanBaseModel.Poems" Width="1.5" PointX="5.125" PointY="1" />
+        <EntityTypeShape EntityType="humanBaseModel.Human" Width="1.5" PointX="3.125" PointY="2.5" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

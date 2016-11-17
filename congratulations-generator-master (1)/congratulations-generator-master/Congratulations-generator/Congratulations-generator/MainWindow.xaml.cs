@@ -66,7 +66,8 @@ namespace Congratulations_generator
 
         private void createtextBoxAge()
         {
-            for (int i = 3; i <= 100; i++) textBoxAge.Items.Add(i);
+            for (int i = 3; i <= 54; i++) textBoxAge.Items.Add(i);
+            textBoxAge.Items.Add("55+");
         }
 
         private bool checkLog()
@@ -116,7 +117,7 @@ namespace Congratulations_generator
                      Id=returnLastId(),
                      Name=textBoxName.Text,
                      Solute=textBoxCall.Text,
-                     Age=Convert.ToInt32(textBoxAge.Text),
+                     Age=textBoxAge.Text,
                      Sex = sex,
                      Interests=comboBoxInterests.Text,
                      Holiday = comboBoxHoliday.Text
@@ -124,22 +125,37 @@ namespace Congratulations_generator
              };
 
             MainWindow.insertToDataBase(lct);
-            People.dataObj = new People(textBoxName.Text, textBoxCall.Text, Convert.ToInt32(textBoxAge.Text), sex, comboBoxInterests.Text, comboBoxHoliday.Text);
+            People.dataObj = new People(textBoxName.Text, textBoxCall.Text, textBoxAge.Text, sex, comboBoxInterests.Text, comboBoxHoliday.Text);
+            //errorEvents();
             //anketa.showPeople();
             //MessageBox.Show(textBoxName.Text);
+            if (errorEvents() == true)
+            {
+                OutputWindow outputWindow = new OutputWindow();
+                //место для функции корректировки данных
+                //место для функции генирации стартового поздравления и картинок
+                //не забыть закрыть первую форму при корректном заполнении
+                //оставлять старые данные при возврате к анкете
+                mainWindow.Close();
+                outputWindow.Show();
+            }
 
-            OutputWindow outputWindow = new OutputWindow();
-            //место для функции корректировки данных
-            //место для функции генирации стартового поздравления и картинок
-            //не забыть закрыть первую форму при корректном заполнении
-            //оставлять старые данные при возврате к анкете
-            //outputWindow.richTextBox.AppendText("Hello,World!\n");
-            //outputWindow.richTextBox.AppendText("Hello,Life!\n\n\n\n\n\n\n\n\n\n");
-            //outputWindow.richTextBox.AppendText("Hello,Friends!\n");
-            mainWindow.Close();
-            outputWindow.Show();
+        }
 
+        private bool errorEvents()
+        {
+            if(People.dataObj.getSex() == "Женский" && People.dataObj.getHoliday() =="23 февраля")
+            {
+                MessageBox.Show("Недопустимое сочетание");
+                return false;
+            }
 
+            if (People.dataObj.getSex() == "Мужской" && People.dataObj.getHoliday() == "8 марта")
+            {
+                MessageBox.Show("Недопустимое сочетание");
+                return false;
+            }
+            return true;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

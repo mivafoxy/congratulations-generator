@@ -25,14 +25,11 @@ namespace Congratulations_generator
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Human> Human { get; set; }
         public virtual DbSet<Interests> Interests { get; set; }
         public virtual DbSet<Holiday> Holiday { get; set; }
-        public virtual DbSet<Birthday_Cliche> Birthday_Cliche { get; set; }
-        public virtual DbSet<Birthday_Picture> Birthday_Picture { get; set; }
-        public virtual DbSet<Birthday_Poem> Birthday_Poem { get; set; }
-        public virtual DbSet<New_Year_Cliche> New_Year_Cliche { get; set; }
-        public virtual DbSet<New_Year_Picture> New_Year_Picture { get; set; }
-        public virtual DbSet<New_Year_Poem> New_Year_Poem { get; set; }
+        public virtual DbSet<Cliche> Cliche { get; set; }
+        public virtual DbSet<Pictures> Pictures { get; set; }
+        public virtual DbSet<Poems> Poems { get; set; }
+        public virtual DbSet<Human> Human { get; set; }
     }
 }

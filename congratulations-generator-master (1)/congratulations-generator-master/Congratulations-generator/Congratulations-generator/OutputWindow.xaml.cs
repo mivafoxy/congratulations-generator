@@ -23,104 +23,20 @@ namespace Congratulations_generator
         public OutputWindow()
         {
             InitializeComponent();
-            //People.dataObj.showPeople();
-            /*
-            Image1.Source = new BitmapImage(new Uri("Images/pepe1.jpg", UriKind.Relative));
-            Image2.Source = new BitmapImage(new Uri("Images/pepe2.png", UriKind.Relative));
-            Image3.Source = new BitmapImage(new Uri("Images/pepe3.png", UriKind.Relative));
-            Image4.Source = new BitmapImage(new Uri("Images/pepe4.jpg", UriKind.Relative));*/
-            if (People.dataObj.getHoliday() == "Новый Год")
-            {
-                this.richTextBox.AppendText(People.dataObj.getSalute() + " " + People.dataObj.getName() + " , " + returnPoemNE(1) + "\n\n\n" + People.dataObj.getSalute() + " " + People.dataObj.getName() + " , " + returnClicheNE(1));
-                Image1.Source = new BitmapImage(new Uri(returnWayPictureNE(1), UriKind.Relative));
-                Image2.Source = new BitmapImage(new Uri(returnWayPictureNE(2), UriKind.Relative));
-                Image3.Source = new BitmapImage(new Uri(returnWayPictureNE(3), UriKind.Relative));
-                Image4.Source = new BitmapImage(new Uri(returnWayPictureNE(4), UriKind.Relative));
-                return;
-            }
-            if (People.dataObj.getHoliday() == "День Рождение")
-            {
-                this.richTextBox.AppendText(People.dataObj.getSalute() + " " + People.dataObj.getName() + " , " + returnPoemB(1) + "\n\n\n" + People.dataObj.getSalute() + " " + People.dataObj.getName() + " , " + returnClicheB(1));
-                Image1.Source = new BitmapImage(new Uri(returnWayPictureB(1), UriKind.Relative));
-                Image2.Source = new BitmapImage(new Uri(returnWayPictureB(2), UriKind.Relative));
-                Image3.Source = new BitmapImage(new Uri(returnWayPictureB(3), UriKind.Relative));
-                Image4.Source = new BitmapImage(new Uri(returnWayPictureB(4), UriKind.Relative));
-                return;
-            }
-            Image1.Source = new BitmapImage(new Uri("Images/pepe1.jpg", UriKind.Relative));
-            Image2.Source = new BitmapImage(new Uri("Images/pepe2.png", UriKind.Relative));
-            Image3.Source = new BitmapImage(new Uri("Images/pepe3.png", UriKind.Relative));
-            Image4.Source = new BitmapImage(new Uri("Images/pepe4.jpg", UriKind.Relative));
-        }
-
-        private string returnPoemNE(int i)
-        {
-            humanBaseEntities context = new humanBaseEntities();
-            IQueryable<New_Year_Poem> custs = context.New_Year_Poem
-                                                   .Where (c=> c.Id==i)
-                                                   .Select(c => c);
-            //MessageBox.Show(custs.First().Picture);
-            return custs.First().Name;
-        }
-
-        private string returnClicheNE(int i)
-        {
-            humanBaseEntities context = new humanBaseEntities();
-            IQueryable<New_Year_Cliche> custs = context.New_Year_Cliche
-                                                   .Where(c => c.Id == i)
-                                                   .Select(c => c);
-            //MessageBox.Show(custs.First().Picture);
-            return custs.First().Name;
-        }
-
-        private string returnPoemB(int i)
-        {
-            humanBaseEntities context = new humanBaseEntities();
-            IQueryable<Birthday_Poem> custs = context.Birthday_Poem
-                                                   .Where(c => c.Id == i)
-                                                   .Select(c => c);
-            //MessageBox.Show(custs.First().Picture);
-            return custs.First().Name;
-        }
-
-        private string returnClicheB(int i)
-        {
-            humanBaseEntities context = new humanBaseEntities();
-            IQueryable<Birthday_Cliche> custs = context.Birthday_Cliche
-                                                   .Where(c => c.Id == i)
-                                                   .Select(c => c);
-            //MessageBox.Show(custs.First().Picture);
-            return custs.First().Name;
-        }
-
-        private string returnWayPictureNE(int i)
-        {
-            humanBaseEntities context = new humanBaseEntities();
-            IQueryable<New_Year_Picture> custs = context.New_Year_Picture
-                                                   .Where(c => c.Id == i)
-                                                   .Select(c => c);
-            //MessageBox.Show(custs.First().Picture);
-            return custs.First().Picture;
-        }
-
-        private string returnWayPictureB(int i)
-        {
-            humanBaseEntities context = new humanBaseEntities();
-            IQueryable<Birthday_Picture> custs = context.Birthday_Picture
-                                                   .Where(c => c.Id == i)
-                                                   .Select(c => c);
-            //MessageBox.Show(custs.First().Picture);
-            return custs.First().Name;
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-
+            //this.Background = new ImageBrush(new BitmapImage(new Uri("BD_Images/Theme/3.jpg", UriKind.RelativeOrAbsolute)));
+            radioButton1.IsEnabled = false;
+            radioButton2.IsEnabled = false;
+            radioButton3.IsEnabled = false;
+            radioButton4.IsEnabled = false;
+            richTextBox1.AppendText(TableChanger.takePoem());
+            richTextBox2.AppendText(TableChanger.takeCliche());
+            Image1.Source = new BitmapImage(new Uri(TableChanger.generatePicture(), UriKind.Relative));
+            Image2.Source = new BitmapImage(new Uri(TableChanger.takePicture(), UriKind.Relative));
+            Image3.Source = new BitmapImage(new Uri(TableChanger.takePicture(), UriKind.Relative));
+            Image4.Source = new BitmapImage(new Uri(TableChanger.takePicture(), UriKind.Relative));
+            if (TableChanger.flagPictures == false) checkBox3.IsEnabled = false;
+            if (TableChanger.flagCliche == false) checkBox2.IsEnabled = false;
+            if (TableChanger.flagPoems == false) checkBox1.IsEnabled = false;
         }
 
         private void buttonPast_Click(object sender, RoutedEventArgs e)
@@ -133,6 +49,110 @@ namespace Congratulations_generator
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            if (checkBox1.IsChecked==true)
+            {
+                TextRange hpoet1 = new TextRange(richTextBox1.Document.ContentStart, richTextBox1.Document.ContentEnd);
+                Congratulations.congratulation.gsPoem = hpoet1.Text;
+            }
+            else
+            {
+                Congratulations.congratulation.gsPoem = String.Empty;
+            }
+
+            if (checkBox2.IsChecked == true)
+            {
+                TextRange hpoet2 = new TextRange(richTextBox2.Document.ContentStart, richTextBox2.Document.ContentEnd);
+                Congratulations.congratulation.gsCliche = hpoet2.Text;
+            }
+            else
+            {
+                Congratulations.congratulation.gsCliche = String.Empty;
+            }
+
+            if (checkBox3.IsChecked == true)
+            {
+                if (radioButton1.IsChecked == true) Congratulations.congratulation.gsImage = Image1.Source;
+                if (radioButton2.IsChecked == true) Congratulations.congratulation.gsImage = Image2.Source;
+                if (radioButton3.IsChecked == true) Congratulations.congratulation.gsImage = Image3.Source;
+                if (radioButton4.IsChecked == true) Congratulations.congratulation.gsImage = Image4.Source;
+            }
+            else
+            {
+                Congratulations.congratulation.gsImage = null;
+            }
+
+            if (Congratulations.congratulation.gsPoem == String.Empty && Congratulations.congratulation.gsCliche == String.Empty && Congratulations.congratulation.gsImage == null)
+            {
+                MessageBox.Show("Вы не выбрали ни одного из элементов поздравления");
+            }
+            else
+            {
+                //Congratulations.congratulation.show();
+                //MessageBox.Show(Image1.Source.ToString());
+                TotalWindow totalWindow = new TotalWindow();
+                totalWindow.Show();
+            }
+        }
+
+        private void refreshButton1_Click(object sender, RoutedEventArgs e)
+        {
+            if (TableChanger.poemsList.listik == null || TableChanger.poemsList.listik.Count == 0) { return; }
+            else
+            {
+                TableChanger.retryPoem();
+                //string txt = TableChanger.reorganizatedPoem(TableChanger.poemsList.listik[TableChanger.poemsList.i].Content);
+                string str = People.dataObj.getSalute() + " " + People.dataObj.getName() + " ! " + TableChanger.reorganizatedPoem(TableChanger.poemsList.listik[TableChanger.poemsList.i].Content);
+                richTextBox1.Document.Blocks.Clear();
+                this.richTextBox1.AppendText(str);
+                TableChanger.poemsList.i++;
+            }
+        }
+
+        private void refreshButton2_Click(object sender, RoutedEventArgs e)
+        {
+            if (TableChanger.clichesList.listik == null || TableChanger.clichesList.listik.Count == 0);
+            else
+            {
+                TableChanger.retryCliche();
+                string str = People.dataObj.getSalute() + " " + People.dataObj.getName() + " , " + TableChanger.clichesList.listik[TableChanger.clichesList.i].Content;
+                richTextBox2.Document.Blocks.Clear();
+                this.richTextBox2.AppendText(str);
+                TableChanger.clichesList.i++;
+            }
+        }
+
+        private void refreshButton3_Click(object sender, RoutedEventArgs e)
+        {
+            if (TableChanger.picturesList.listik == null || TableChanger.picturesList.listik.Count == 0) ;
+            else
+            {
+                Image1.Source = new BitmapImage(new Uri(TableChanger.takePicture(), UriKind.Relative));
+                Image2.Source = new BitmapImage(new Uri(TableChanger.takePicture(), UriKind.Relative));
+                Image3.Source = new BitmapImage(new Uri(TableChanger.takePicture(), UriKind.Relative));
+                Image4.Source = new BitmapImage(new Uri(TableChanger.takePicture(), UriKind.Relative));
+            }
+        }
+
+        private void checkBox3_Click(object sender, RoutedEventArgs e)
+        {
+            if (checkBox3.IsChecked == true)
+            {
+                radioButton1.IsEnabled = true;
+                radioButton2.IsEnabled = true;
+                radioButton3.IsEnabled = true;
+                radioButton4.IsEnabled = true;
+            }
+            else
+            {
+                radioButton1.IsEnabled = false;
+                radioButton2.IsEnabled = false;
+                radioButton3.IsEnabled = false;
+                radioButton4.IsEnabled = false;
+            }
         }
     }
 }
